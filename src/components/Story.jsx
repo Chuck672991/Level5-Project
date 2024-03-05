@@ -10,7 +10,7 @@ export default function Story() {
     <Container>
       <Grid container spacing={2} sx={{maxHeight:"20vh"}}>
         <Grid item xs={12} md={6}></Grid>
-        <Grid container spacing={2} sx={{ paddingTop: { xs: "0", md: "vh" } }}>
+        <Grid container spacing={2} >
           <Grid item xs={12} md={6}>
             <Box sx={{ paddingLeft: { xs: "6vh", md: "vh" },height: { xs: "30vh", md: "vh" },paddingRight: { xs: "", md: "vh" } }}>
               <Design2 />

@@ -53,7 +53,7 @@ export default function Navbar() {
   }
 
   return (
-    <div style={{ background: 'linear-gradient(241deg, rgba(0,0,0,1) 10%, rgba(7,4,66,0.9051995798319328) 100%)', }}>
+    <div style={{ background: "transparent", }}>
    
    <AppBar position="static" sx={{ backgroundColor: "inherit" }}>
       <Toolbar sx={{ justifyContent: 'space-between', backgroundColor: "inherit" }}>
@@ -67,7 +67,7 @@ export default function Navbar() {
         
         {/* Menu Icon and Links */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: "" }}>
-          <div style={{ display: showLinks ? 'block' : 'none', textAlign: 'center' }}>
+          <div style={{ display: showLinks ? 'block' : 'none', textAlign: 'center' ,fontFamily:"IBM Plex Sans Arabic" }}>
             {links.map((link, index) => (
               <a key={index} href={link.url} style={{ marginRight: '80px', textDecoration: 'none', color: 'inherit' }}>
                 {link.title}
