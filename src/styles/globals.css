@@ -3,3 +3,23 @@
 :root {
     background-color: black;
  }
+#hd-card{
+    padding: 2vw 1vw;
+    height: 300px;
+    width: 350px;
+    
+
+}
+#hd-card #hd-label{
+    font-size: 1.5vw;
+    line-height: 2;
+    font-weight: bold;
+}
+#hd-card #hd-desc{
+    font-size: 1.1vw;
+    line-height: 0;
+}
+#hd-card img{
+    height: 60px;
+}
+/* */
