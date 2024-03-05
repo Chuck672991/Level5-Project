@@ -41,8 +41,8 @@ export default function Header() {
                   Where technology is finely curated & elegantly tailored for every client’s journey
                 </Typography>
               </Box>
-              <Box>
-                <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="level five logo " style={{ paddingTop:"40%", paddingLeft: isSmallScreen ? "15.5vh" : "7.5vh", width: isSmallScreen ? "30vh" : "15vh" }} />
+              <Box  >
+                <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="level five logo " style={{ paddingTop:"20%", paddingLeft: isSmallScreen ? "10.5vh" : "3.5vh", width:isSmallScreen?"30vw":"20vw" }} sx={{width:{xs:"20px",md:"50px"}}} />
               </Box>
             </Grid>
             {/* Right Grid Item */}
