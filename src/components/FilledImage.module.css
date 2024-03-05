@@ -1,0 +1,70 @@
+/* FilledImage.module.css */
+
+.logoContainer {
+  position: absolute;
+  animation: fillLogo 2s forwards;
+}
+
+@keyframes fillLogo {
+  from {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.smallScreen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 90%;
+}
+
+.largeScreen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20%;
+}
+
+@media (min-width: 601px) {
+  .smallScreen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20%;
+  }
+
+  .largeScreen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20%;
+  }
+}
+
+.main-page {
+  animation: slideUp 3s ease-in-out; /* Add slide-up animation */
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+/* Your other CSS styles */
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
