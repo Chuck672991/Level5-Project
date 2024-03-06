@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; // Import the ExpandMoreIcon
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
@@ -13,33 +13,17 @@ import React, { useState, useEffect } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const sections = [
-  { label: "Requirements", content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique, where each level represents a curated space of expertise. Just as one explores unique offering in a boutique, Level Five aspires to deliver specialized and tailored IT solutions at the highest level of proficiency." },
-  { label: "Cybersecurity Services (regulated)", content: "Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth." },
-  { label: "Cybersecurity Services (regulated)", content: "Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth." },
-  { label: "Cybersecurity Services (regulated)", content: "Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth." },
+  { label: "IT Group Services", content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique," },
+  { label: "Data Center & Cloud Services", content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique," },
+  { label: "Emerging Technologies", content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique," },
+  { label: "Emerging Technologies", content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique," },
 ];
 
 const images = [
-  {
-    label: 'IT Group Services',
-    src: './1 (1).svg',
-    description: 'Level five software house is best Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.',
-  },
-  {
-    label: 'Data Center & Cloud Services',
-    src: './2 (1).svg',
-    description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.',
-  },
-  {
-    label: 'Emerging Technologies',
-    src: './3 (1).svg',
-    description: 'Level five software house is best Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.',
-  },
-  {
-    label: 'Emerging Technologies',
-    src: './3 (1).svg',
-    description: 'Level five software house is best Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower growth.',
-  },
+  { label: 'IT Group Services', src: './1 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers  .   Seamlessly empower growth.' },
+  { label: 'Data  Cloud Services', src: './2 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers.  Seamlessly empower growth.' },
+  { label: 'Emerging Technologies', src: './3 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.' },
+  { label: 'Emerging Technologies', src: './3 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.' },
 ];
 
 function ResponsiveCard() {
@@ -48,15 +32,18 @@ function ResponsiveCard() {
   const [showContact, setShowContact] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
   const [activeImage, setActiveImage] = useState(null);
-  const isLargeScreen = useMediaQuery("(max-width:900px)");
+  const [expandedSections, setExpandedSections] = useState(Array(sections.length).fill(false));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   useEffect(() => {
-    // Set the active section to the index of the "Requirements" section initially
     const initialSectionIndex = sections.findIndex(section => section.label === "Requirements");
     setActiveSection(initialSectionIndex);
   }, []);
 
   const handleClickSection = (index) => {
+    const newExpandedSections = [...expandedSections];
+    newExpandedSections[index] = !newExpandedSections[index];
+    setExpandedSections(newExpandedSections);
     setActiveSection(activeSection === index ? null : index);
   };
 
@@ -78,14 +65,12 @@ function ResponsiveCard() {
 
   return (
     <>
-      <div style={{backgroundColor:"#1B1B1F", minHeight:"70vh",minWidth:"52.5vh"}}>
+      <div style={{ backgroundColor: "#1B1B1F", minHeight: "100%", minWidth: "100%" }}>
         <Box sx={{}}>
           <Typography sx={{}}></Typography>
         </Box>
-        <br />
-        <br />
-        <br />
-        <Box sx={{ flexGrow: 0 }}>
+
+        <Box sx={{ flexGrow: 2 }}>
           <Box sx={{ display: 'flex', justifyContent: 'center', mt: 0 }}>
             <Button size="small" onClick={handleBack}>
               <KeyboardArrowLeft />
@@ -94,28 +79,44 @@ function ResponsiveCard() {
               <KeyboardArrowRight />
             </Button>
           </Box>
-          <Grid container spacing={2} justifyContent="end">
-            <Grid item xs={12} sm={12} md={4}>
-              <Box sx={{ paddingX: "8%" }}>
+          <Grid container spacing={2.5} justifyContent="end">
+            <Grid item xs={12} md={4}>
+              <Box sx={{ paddingX: isSmallScreen ? "4%" : "8%" }}>
+              <Box  sx={{}}>
+                   <Typography sx={{fontWeight:"bold",fontSize:{xs:"3vh",},color:"#fff"}}>
+                   Our Solutions & Service Offering
+                   </Typography>
+                   <Typography sx={{fontSize:"3.5vh",color:"#fff"}}>
+                   End-to-End Solutions for You
+                   </Typography>
+<Box sx={{borderBottom:"0.5vh solid #553EFF",width:{xs:"22vh",md:"21vh"}}}></Box>
+                   </Box>
+
                 <Grid container my={2} spacing={2}>
-                  <Grid item xs={3} md={6} sm={6} lg={2} xl={4}>
+
+                  <Grid item xs={12} md={10}>
+
+                   <Typography sx={{color:"#fff",fontSize:{xs:"3vh",md:"3vh.",lg:"4.5"}}}>
+                   IT Services
+                   </Typography>
                     {sections.map((section, index) => (
                       <div key={index}>
                         <Button
                           sx={{
                             color: "#ffff",
                             fontFamily: "Clash Display",
-                            fontSize: "10px",
-                            fontWeight: "100",
-                            lineHeight: "normal",
-                            width:""
+                            fontSize: isSmallScreen ? "12px" : "10px",
+                            fontWeight: "10",
+                            lineHeight: "3",
+                            width: "100%",
+                            borderBottom:"1px solid #ffff"
+                            
                           }}
-                          onClick={() => handleClickSection()}
+                          onClick={() => handleClickSection(index)}
                         >
-                          {section.label} <ExpandMoreIcon />
-                        
+                           {section.label} <ExpandMoreIcon sx={{ color: expandedSections[index] ? '#553EFF' : 'inherit' }} />
                         </Button>
-                        {activeSection === index && isLargeScreen && (
+                        {activeSection === index && (
                           <Box>
                             <Typography
                               sx={{
@@ -124,7 +125,7 @@ function ResponsiveCard() {
                                 fontSize: "20px",
                                 fontWeight: "400",
                                 lineHeight: "normal",
-                                mb: "15px",
+                                mb: "px",
                               }}
                             >
                               {section.label}
@@ -151,13 +152,14 @@ function ResponsiveCard() {
               </Box>
             </Grid>
             {images.map((image, index) => (
-              <Grid item key={index} xs={3} sm={6} md={2}>
-                <Paper elevation={3} sx={{ p: 0, textAlign: 'start', backgroundColor: "black" }}>
+              <Grid item key={index} xs={6} sm={3} md={2}>
+                <Paper elevation={3} sx={{ p: 0, textAlign: 'center', backgroundColor: "black" }}>
                   <Card
                     sx={{
-                      maxWidth: 245,
+                      maxWidth: "100%",
                       mt: 2,
                       bgcolor: activeStep === index ? '#553EFF' : 'black',
+               
                     }}
                     onClick={() => handleClickImage(index)}
                   >
@@ -167,10 +169,10 @@ function ResponsiveCard() {
                         alt=""
                         style={{ width: "8vh", paddingBottom: "3vh" }}
                       />
-                      <Typography gutterBottom variant="" component="div" sx={{ fontSize: { xs: "1vh", md: "" }, color: activeStep === index ? 'black' : '#ffff', paddingBottom: "1vh", fontSize: "bold" }}>
+                      <Typography gutterBottom variant="" component="div" sx={{ fontSize: { xs: "vh", md: "2vh" }, color: activeStep === index ? 'black' : '#ffff', paddingBottom: "1vh", fontSize: "" }}>
                         {image.label}
                       </Typography>
-                      <Typography variant="" color="text.secondary" sx={{ color: activeStep === index ? 'black' : ' #ffff', fontSize: { xs: ".5vh", md: "" }, }}>
+                      <Typography variant="" color="text.secondary" sx={{ color: activeStep === index ? 'black' : ' #ffff', fontSize: { xs: "1.5vh", md: "2vh" }, }}>
                         {image.description}
                       </Typography>
                     </CardContent>
@@ -181,15 +183,14 @@ function ResponsiveCard() {
           </Grid>
 
           {showContact && (
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
-              {/* Add your contact information here */}
+            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 0 }}>
               <Typography variant="h6">Contact Information</Typography>
               <Typography variant="body1">Phone: +1234567890</Typography>
               <Typography variant="body1">Email: example@example.com</Typography>
             </Box>
           )}
         </Box>
-        
+
       </div>
     </>
   );

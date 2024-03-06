@@ -25,7 +25,7 @@ export default function Connect() {
           height: '50vh', // Set the height to fill the viewport
         }}
       >
-        <Box sx={{ textAlign: 'center', marginBottom: 'rem',paddingLeft:{xs:"25vh",md:"25vh"} }}>
+        <Box sx={{ textAlign: 'center', marginBottom: 'rem',paddingLeft:{xs:"10vh",md:"25vh"} }}>
               
           <Typography  sx={{ color: '#fff' , fontSize: { xs: '1.5vh', sm: '1.7vh', md: '2vh', lg: '2.2vh', xl: '2.5vh' }                                                                                             }}>
             Please drop us an email at
