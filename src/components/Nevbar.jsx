@@ -6,8 +6,13 @@ import {
   IconButton,
   Menu,
   MenuItem,
+  useMediaQuery,
+  Divider,
+  ListItem,ListItemButton,ListItemText,
+  List,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Box } from "@mui/system";
 
 const links = [
   { title: "About us", url: "/" },
@@ -20,6 +25,18 @@ export default function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [hover, setHover] = useState(false);
   const [loading, setLoading] = useState(true);
+  const mobileS = useMediaQuery('(min-width:600px)');
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  function DrawerAppBar(props) {
+    const { window } = props;
+    const [mobileOpen, setMobileOpen] = React.useState(false);
+  
+    const handleDrawerToggle = () => {
+      setMobileOpen((prevState) => !prevState);
+    };
+  
+  }
+
 
   useEffect(() => {
     // Simulate loading delay
@@ -43,6 +60,10 @@ export default function Navbar() {
     return null; // Render nothing until loading is complete
   }
 
+  const drawerWidth = 240;
+  const navItems = ['Home', 'About', 'Contact'];
+  
+  
   return (
     <div
       style={{
@@ -52,24 +73,24 @@ export default function Navbar() {
       }}
     >
       <AppBar position="static"
-       sx={{ backgroundColor: "inherit" }}
+       sx={{ backgroundColor: "inherit"}}
+         onMouseLeave={() => setHover(!hover)}
        >
         <Toolbar
-          onMouseLeave={() => setHover(!hover)}
-          sx={{ justifyContent: "space-between", backgroundColor: "inherit",boxSizing:"border-box" }}
+          sx={{backgroundColor: "inherit",boxSizing:"border-box" }}
         >
-          {/* Logo and Links */}
-
-          {/* Menu Icon and Links */}
+{
+  
           <div style={{ backgroundColor: "inherit" }}>
             <div
               style={{
+                overflow:"hidden",
                 position: "absolute",
                 background: "inherit",
                 left: "20%",
                 top: hover ? "0" : "-100%",
                 transition: "0.5s ease",
-                padding: "2vw",
+                padding: "1vw 2vw",
               }}
             >
               {links.map((link, index) => (
@@ -86,14 +107,17 @@ export default function Navbar() {
                 </a>
               ))}
             </div>
-
-            <MenuIcon
-              style={{ position: "absolute", right: "10px", top: "10px" }}
+         <MenuIcon
+              style={{ position: "absolute", right: "10px", top: "10px", display: { xs: 'block', sm: 'block', md: 'none' }}}
               onMouseEnter={() => setHover(!hover)}
+              
             />
+      
           </div>
+}
+{/* {mobileS &&
 
-          <div>
+          <div> 
             <Menu
               id="menu"
               anchorEl={anchorEl}
@@ -115,8 +139,20 @@ export default function Navbar() {
               ))}
             </Menu>
           </div>
+} */}
+
         </Toolbar>
       </AppBar>
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
