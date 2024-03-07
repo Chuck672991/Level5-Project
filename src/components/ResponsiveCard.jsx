@@ -2,7 +2,6 @@ import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; // Import the ExpandMoreIcon
@@ -11,29 +10,41 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import React, { useState, useEffect } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import 'swiper/css';
+import { useRef } from 'react';
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Button from '@mui/material/Button';
+import Link from 'next/link';
+SwiperCore.use([Navigation, Pagination]);
+
 
 const sections = [
-  { label: "IT Group Services", content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique," },
-  { label: "Data Center & Cloud Services", content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique," },
-  { label: "Emerging Technologies", content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique," },
-  { label: "Emerging Technologies", content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique," },
+  { label: "IT Group Services "  , content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique," },
+  { label: "Data Center & Cloud Services",service:"Services" , content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique," },
+  { label: "Emerging Technologies" , content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique," },
+  { label: "Emerging Technologies ", content: "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique," },
 ];
 
 const images = [
-  { label: 'IT Group Services', src: './1 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers  .   Seamlessly empower growth.' },
-  { label: 'Data  Cloud Services', src: './2 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers.  Seamlessly empower growth.' },
-  { label: 'Emerging Technologies', src: './3 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.' },
-  { label: 'Emerging Technologies', src: './3 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.' },
+  { label: 'IT Group ',service:"Services", src: './1 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers  .   Seamlessly empower growth.' },
+  { label: 'Data  Cloud ',service:"Services", src: './2 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers.  Seamlessly empower growth.' },
+  { label: 'Emerging ',service:"Technologies" ,src: './3 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.' },
+  { label: 'Software  ',service:"Services", src: './3 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.' },
 ];
 
 function ResponsiveCard() {
+  const swiperRef = useRef(null); 
   const theme = useTheme();
   const [activeStep, setActiveStep] = useState(0);
   const [showContact, setShowContact] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
   const [activeImage, setActiveImage] = useState(null);
   const [expandedSections, setExpandedSections] = useState(Array(sections.length).fill(false));
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('600'));
+  const isMediumScreen = useMediaQuery(theme.breakpoints.down('960'));
+  const isMediumScreen2 = useMediaQuery("(max-width:900px)");
+
 
   useEffect(() => {
     const initialSectionIndex = sections.findIndex(section => section.label === "Requirements");
@@ -52,12 +63,20 @@ function ResponsiveCard() {
   };
 
   const handleNext = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
     setActiveStep((prevActiveStep) => (prevActiveStep + 1) % images.length);
+    setActiveSection(activeStep);
   };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => (prevActiveStep === 0 ? images.length - 1 : prevActiveStep - 1));
-  };
+  
+const handleBack = () => {
+  if (swiperRef.current && swiperRef.current.swiper) {
+    swiperRef.current.swiper.slidePrev();
+  }
+  setActiveStep((prevActiveStep) => (prevActiveStep === 0 ? images.length - 1 : prevActiveStep - 1));
+  setActiveSection(activeStep);
+};
 
   const toggleContact = () => {
     setShowContact((prevShowContact) => !prevShowContact);
@@ -65,63 +84,59 @@ function ResponsiveCard() {
 
   return (
     <>
+
       <div style={{ backgroundColor: "#1B1B1F", minHeight: "100%", minWidth: "100%" }}>
-        <Box sx={{}}>
+        {/* <Box sx={{}}>
           <Typography sx={{}}></Typography>
-        </Box>
+        </Box> */}
 
         <Box sx={{ flexGrow: 2 }}>
-          <Box sx={{ display: 'flex', justifyContent: 'center', mt: 0 }}>
-            <Button size="small" onClick={handleBack}>
-              <KeyboardArrowLeft />
+          <Box sx={{ position: "relative", paddingLeft:{xs:"50%" ,sm:"75%", md:"80%" ,lg:"80%" ,xl:"90%" } }}>
+            <Button size="large" onClick={handleBack} >
+              <KeyboardArrowLeft  />
             </Button>
-            <Button size="small" onClick={handleNext}>
+            <Button size="large" onClick={handleNext}>
               <KeyboardArrowRight />
             </Button>
           </Box>
           <Grid container spacing={2.5} justifyContent="end">
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} sm={6} md={4} lg={4} xl={6} order={isMediumScreen2 ? 2 : 1}>
               <Box sx={{ paddingX: isSmallScreen ? "4%" : "8%" }}>
-              <Box  sx={{}}>
-                   <Typography sx={{fontWeight:"bold",fontSize:{xs:"1.5vh",sm:"2.5vh",md:"1.2vh"},color:"#fff"}}>
-                   Our Solutions & Service Offering
-                   </Typography>
-                   <Typography sx={{fontSize:{xs:"1.5vh",sm:"2.5vh",md:"1.2vh"},color:"#fff"}}>
-                   End-to-End Solutions for You
-                   </Typography>
-<Box sx={{borderBottom:"0.5vh solid #553EFF",width:{xs:"10vh",sm:"12vh",md:"8vh"}}}></Box>
-                   </Box>
-
-                <Grid container my={2} spacing={2}>
-
-                  <Grid item xs={12} md={10}>
-
-                   <Typography sx={{color:"#fff",fontSize:{xs:"2vh",sm:"1.5vh",md:"vh.",lg:"4.5"}}}>
-                   IT Services
-                   </Typography>
+                <Box sx={{}}>
+                  <Typography sx={{ fontWeight: "bold", fontSize: { xs: "3.5vh", }, color: "#F5F5F5" }}>
+                    Our Solutions & Service Offering
+                  </Typography>
+                  <Typography sx={{ fontSize: "3.5vh", color: "#F5F5F5" }}>
+                    End-to-End Solutions for You
+                  </Typography>
+                  <Box sx={{ borderBottom: "0.5vh solid #553EFF", width: { xs: "22vh", md: "21vh" } }}></Box>
+                  <Typography sx={{ color: "#F5F5F5",paddingTop:"5%", fontSize: { xs: "3vh", md: "3vh.", lg: "4.5" },paddingBottom:{lg:"5vh"} }}>
+                      IT Services
+                    </Typography>
                     {sections.map((section, index) => (
                       <div key={index}>
                         <Button
                           sx={{
-                            color: "#ffff",
-                            fontFamily: "Clash Display",
-                            fontSize: {xs:"1.5vh",sm:"1vh",md:"1vh",lg:"1.1vh",xl:"1.5vh"},
+                            color: "#C5C5C5",
+                            fontFamily: "IBM Plex Sans Arabic",
+                            fontSize: isSmallScreen ? "12px" : "10px",
                             fontWeight: "10",
                             lineHeight: "3",
                             width: "100%",
-                            borderBottom:"1px solid #ffff"
-                            
+                            borderBottom: "1px solid #ffff",
+                            // paddingBottom:"5%"
+
                           }}
                           onClick={() => handleClickSection(index)}
                         >
-                           {section.label} <ExpandMoreIcon sx={{ color: expandedSections[index] ? '#553EFF' : 'inherit' }} />
+                          {section.label} <ExpandMoreIcon sx={{ color: expandedSections[index] ? '#553EFF' : 'inherit' }} />
                         </Button>
                         {activeSection === index && (
                           <Box>
                             <Typography
                               sx={{
-                                color: "#ffff",
-                                fontFamily: "Clash Display",
+                                color: "#C5C5C5",
+                                fontFamily: "IBM Plex Sans Arabic",
                                 fontSize: "20px",
                                 fontWeight: "400",
                                 lineHeight: "normal",
@@ -132,8 +147,8 @@ function ResponsiveCard() {
                             </Typography>
                             <Typography
                               sx={{
-                                color: "#ffff",
-                                fontFamily: "Clash Display",
+                                color: "#C5C5C5",
+                                fontFamily: "IBM Plex Sans Arabic",
                                 fontSize: "12px",
                                 fontWeight: "400",
                                 lineHeight: "normal",
@@ -147,39 +162,69 @@ function ResponsiveCard() {
                         )}
                       </div>
                     ))}
+                </Box>
+
+                {/* <Grid container my={2} spacing={2}>
+
+                  <Grid item xs={12} sm={12} md={8}    >
+
+                   
                   </Grid>
-                </Grid>
+                </Grid> */}
               </Box>
             </Grid>
-            {images.map((image, index) => (
-              <Grid item key={index} xs={6} sm={3} md={2}>
-                <Paper elevation={3} sx={{ p: 0, textAlign: 'center', backgroundColor: "black" }}>
-                  <Card
-                    sx={{
-                      maxWidth: "100%",
-                      mt: 2,
-                      bgcolor: activeStep === index ? '#553EFF' : 'black',
-               
-                    }}
-                    onClick={() => handleClickImage(index)}
-                  >
-                    <CardContent>
-                      <img
-                        src={image.src}
-                        alt=""
-                        style={{ width: "8vh", paddingBottom: "3vh" }}
-                      />
-                      <Typography gutterBottom variant="" component="div" sx={{ fontSize: { xs: "vh", md: "2vh" }, color: activeStep === index ? 'black' : '#ffff', paddingBottom: "1vh", fontSize: "" }}>
-                        {image.label}
-                      </Typography>
-                      <Typography variant="" color="text.secondary" sx={{ color: activeStep === index ? 'black' : ' #ffff', fontSize: { xs: "1.5vh", md: "2vh" }, }}>
-                        {image.description}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Paper>
-              </Grid>
-            ))}
+
+            <Grid item xs={12} sm={6 } md={8} lg={8} xl={6} order={isMediumScreen2 ? 2 : 1}>
+              <Paper elevation={3} sx={{ p: 10, textAlign: 'center', backgroundColor: "#1B1B1F" ,border:"none" }}>
+                <Swiper
+                  ref={swiperRef}
+                  spaceBetween={10} // Adjust as needed
+                  slidesPerView={isSmallScreen ? 1 : isMediumScreen? 1 : 2.4}
+                  navigation 
+                  pagination={{ clickable: false }}
+                >
+                  {images.map((image, index) => (
+                    <SwiperSlide key={index} >
+                      <Card
+                        sx={{
+                          Width: {md:"60%"},
+                          mt: 2,
+                          // font:"50px",
+                          height:"320px",
+                          // color: activeStep === index ? '#553EFF' : '#FFFF',
+
+                          bgcolor: activeStep === index ? '#553EFF' : 'black',
+
+                        }}
+                        onClick={() => handleClickImage(index)}
+                      >
+                        <CardContent sx={{fontFamily:"IBM Plex Sans Arabic",}} >
+                          <img
+                            src={image.src}
+                            alt=""
+                            style={{ width: "8vh", paddingBottom: "3vh" , display:"flex", flexDirection:"start" }}
+                            // sx={{display:"flex", flexDirection:"start"}}
+                          />
+                          <Typography variant="" component="div" sx={{ display:"flex", flexDirection:"start",fontSize: { xs: "3vh", md: "5vh" ,sm:"10   vh", }, color: activeStep === index ? '#FFFF' : '#ffff', paddingBottom: "1vh", fontSize: "28px",fontWeight:"600" }}>
+                            {image.label} 
+                            
+                          </Typography>
+                          <Typography sx={{ display:"flex", flexDirection:"start", fontSize: { xs: "vh", md: "2vh" }, color: activeStep === index ? '#FFFF' : '#ffff', paddingBottom: "1vh", fontSize: "20px",fontWeight:"200" }}>
+                          {image.service}
+                          </Typography>
+                          <Typography variant="" color="#FFFF" sx={{display:"flex",  color: activeStep === index ? '#FFFF' : ' #ffff', fontSize: { xs: "2.5vh", md: "14px" }, }}>
+                            {image.description}
+                          </Typography>
+                          <Button  sx={{ display:"flex", flexDirection:"start", color: activeStep === index ? '#FFFF' : ' #553EFF', fontSize:"10px" ,pb:"10%", pt:"20%"}} >
+                            Learn More...
+                          </Button>
+                        </CardContent>
+                      </Card>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </Paper>
+            </Grid>
           </Grid>
 
           {showContact && (

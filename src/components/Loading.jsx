@@ -10,11 +10,11 @@ const Loading = () => {
   const is600 = useMediaQuery('(max-width:600px)'); // Check if screen size is 600px or smaller
 
   useEffect(() => {
-    const delay = 3000;
+    const delay = 2000;
     const timeoutId = setTimeout(() => {
       document.documentElement.style.scrollBehavior = 'smooth';
       window.scrollTo({
-        top: 635,
+        top: 540,
       });
     }, delay);
 
