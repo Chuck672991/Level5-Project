@@ -19,15 +19,14 @@ const Layout = ({ children }) => {
   return (
     <div>
       <header>
-      <Nevbar />
+        {loading && <Loading />} {/* Render the loading component only if loading state is true */}
+        <Nevbar />
       </header>
-      {loading ? (
-        <Loading />
-      ) : (
-
-        <main>{children}</main>
-      )}
-      <Footer/>
+      <main>
+        {/* Render children only when loading is completed */}
+        {!loading && children}
+      </main>
+      <Footer />
     </div>
   );
 };

@@ -83,20 +83,20 @@ function ResponsiveCard() {
             <Grid item xs={12} md={4}>
               <Box sx={{ paddingX: isSmallScreen ? "4%" : "8%" }}>
               <Box  sx={{}}>
-                   <Typography sx={{fontWeight:"bold",fontSize:{xs:"3vh",},color:"#fff"}}>
+                   <Typography sx={{fontWeight:"bold",fontSize:{xs:"1.5vh",sm:"2.5vh",md:"1.2vh"},color:"#fff"}}>
                    Our Solutions & Service Offering
                    </Typography>
-                   <Typography sx={{fontSize:"3.5vh",color:"#fff"}}>
+                   <Typography sx={{fontSize:{xs:"1.5vh",sm:"2.5vh",md:"1.2vh"},color:"#fff"}}>
                    End-to-End Solutions for You
                    </Typography>
-<Box sx={{borderBottom:"0.5vh solid #553EFF",width:{xs:"22vh",md:"21vh"}}}></Box>
+<Box sx={{borderBottom:"0.5vh solid #553EFF",width:{xs:"10vh",sm:"12vh",md:"8vh"}}}></Box>
                    </Box>
 
                 <Grid container my={2} spacing={2}>
 
                   <Grid item xs={12} md={10}>
 
-                   <Typography sx={{color:"#fff",fontSize:{xs:"3vh",md:"3vh.",lg:"4.5"}}}>
+                   <Typography sx={{color:"#fff",fontSize:{xs:"2vh",sm:"1.5vh",md:"vh.",lg:"4.5"}}}>
                    IT Services
                    </Typography>
                     {sections.map((section, index) => (
@@ -105,7 +105,7 @@ function ResponsiveCard() {
                           sx={{
                             color: "#ffff",
                             fontFamily: "Clash Display",
-                            fontSize: isSmallScreen ? "12px" : "10px",
+                            fontSize: {xs:"1.5vh",sm:"1vh",md:"1vh",lg:"1.1vh",xl:"1.5vh"},
                             fontWeight: "10",
                             lineHeight: "3",
                             width: "100%",
