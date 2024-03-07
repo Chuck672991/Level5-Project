@@ -191,7 +191,7 @@ export function Icon() {
         <circle
           key={ball.id}
           id={ball.id}
-          cx={ball.cx}
+          cx={ball.cx}   
           cy={ball.cy}
           r={ball.r}
           fill="#553EFF"
