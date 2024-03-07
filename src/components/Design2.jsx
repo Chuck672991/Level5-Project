@@ -37,7 +37,11 @@ export function IconLine() {
       width="55vw"
       height="90vh"
       fill="none"
+<<<<<<< HEAD
       viewBox="0 0 600 600"
+=======
+      viewBox="0 0 690 600"
+>>>>>>> origin/main
     >
       <path className="line-path" strokeWidth="2" d="M1 0L1 293"></path>
       <path className="line-path" strokeWidth="2" d="M34 0L34 310"></path>
