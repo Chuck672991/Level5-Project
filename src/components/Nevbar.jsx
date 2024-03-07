@@ -47,8 +47,7 @@ export default function Navbar() {
     <div
       style={{
         paddingRight: "vh",
-        background:
-          "transparent",
+        background:"transparent"
       }}
     >
       <AppBar position="static"

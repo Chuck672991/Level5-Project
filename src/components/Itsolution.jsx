@@ -57,7 +57,7 @@ export default function Itsolution() {
                   sx={{
                     backgroundColor: "#553EFF",
                     borderRadius: '8px',
-                    width: { xs: '45%', sm: '50%', md: "80%", lg: '45%' },
+                    width: { xs: '35%', sm: '50%', md: "80%", lg: '45%' },
                     height: { xs: '5vh', sm: '46px', md: "50px", lg: "60px" },
                     fontFamily: "IBM Plex Sans Arabic",
                     paddingLeft: {
@@ -75,7 +75,7 @@ export default function Itsolution() {
             </Box>
           </Grid>
           <Grid item xs={12} md={6} lg={6} xl={6}>
-            <Box sx={{ paddingLeft: { xs: "0", md: "10vh" }, width: { xs: "60vh",sm:"90vh", md: "70.5vh" ,lg:"90vh"}, paddingTop: isMobileScreen ? "8%" : "18%", fontWeight: "300",  }}>
+            <Box sx={{ paddingLeft: { xs: "0", md: "0vh" }, width: { xs: "50vh",sm:"90vh", md: "60.5vh" ,lg:"90vh"}, paddingTop: isMobileScreen ? "8%" : "18%", fontWeight: "300",  }}>
               <Typography sx={{ color: "#C5C5C5", fontFamily: "IBM Plex Sans Arabic", fontSize: {xs:"14px",sm:"16px",md:"15px",lg:"18px"} }}>
                 We aspire to be the premier IT solutions facilitator in the Kingdom, connecting clients with specialized expertise while maintaining operational agility and cost-effectiveness.
               </Typography>

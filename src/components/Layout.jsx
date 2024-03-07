@@ -17,16 +17,15 @@ const Layout = ({ children }) => {
   }, []);
 
   return (
-    <div>
+    <div style={{width:"100%"}}>
       <header>
-      <Nevbar />
+        {loading && <Loading />} {/* Render the loading component only if loading state is true */}
+        <Nevbar/>
       </header>
-      {loading ? (
-        <Loading />
-      ) : (
-
-        <main>{children}</main>
-      )}
+      <main>
+        {/* Render children only when loading is completed */}
+        {!loading && children}
+      </main>
       <Footer />
     </div>
   );
