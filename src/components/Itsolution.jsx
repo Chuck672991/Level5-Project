@@ -13,6 +13,9 @@ export default function Itsolution() {
   return (
       <Container>
     <div style={{ backgroundColor: "#000" }}>
+<br />
+<br />
+<br />
 
         <Grid container spacing={2} sx={{ paddingLeft: isMobileScreen ? "2vh" : "3vh" }}>
           <Grid item xs={12} md={6} lg={6} xl={6}>
@@ -76,7 +79,7 @@ export default function Itsolution() {
             </Box>
           </Grid>
           <Grid item xs={12} md={6} lg={6} xl={6}>
-            <Box sx={{ paddingLeft: { xs: "0", md: "0vh" }, width: { xs: "30vh",sm:"40vh", md: "35.5vh" ,lg:"80vh"}, paddingTop: isMobileScreen ? "8%" : "18%", fontWeight: "300",  }}>
+            <Box sx={{ paddingLeft: { xs: "0", md: "0vh" }, width: { xs: "30vh",sm:"40vh", md: "35.5vh" ,lg:"80vh"}, paddingTop: isMobileScreen ? "8%" : "1%", fontWeight: "300",  }}>
               <Typography sx={{ color: "#C5C5C5", fontFamily: "IBM Plex Sans Arabic", fontSize: {xs:"14px",sm:"16px",md:"15px",lg:"18px"} }}>
                 We aspire to be the premier IT solutions facilitator in the Kingdom, connecting clients with specialized expertise while maintaining operational agility and cost-effectiveness.
               </Typography>
