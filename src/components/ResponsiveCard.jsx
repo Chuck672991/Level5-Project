@@ -78,7 +78,7 @@ function ResponsiveCard() {
 
   return (
     <>
-      <div style={{backgroundColor:"#1B1B1F", minHeight:"70vh",minWidth:"52.5vh"}}>
+      <div style={{backgroundColor:"#1B1B1F", minHeight:"70vh",minWidth:"100%"}}>
         <Box sx={{}}>
           <Typography sx={{}}></Typography>
         </Box>
