@@ -10,11 +10,11 @@ const Loading = () => {
   const is600 = useMediaQuery('(max-width:600px)'); // Check if screen size is 600px or smaller
 
   useEffect(() => {
-    const delay = 3000;
+    const delay = 2000;
     const timeoutId = setTimeout(() => {
       document.documentElement.style.scrollBehavior = 'smooth';
       window.scrollTo({
-        top: 635,
+        top: 540,
       });
     }, delay);
 
@@ -25,7 +25,7 @@ const Loading = () => {
   }, []);
 
   return (
-    <div className="loading" style={{background: 'linear-gradient(-140deg, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 61%, rgba(7,4,66,0.9051995798319328) 100%)',height:"97.6vh"}}>
+    <div className="loading" style={{background: 'linear-gradient(143deg, rgba(0,0,0,1) 1%, rgba(7,4,66,1) 47%, rgba(1,1,12,1) 89%)',height:"97.6vh"}}>
       <div className="h-screen">
         <div className={`text-center relative transform scale-75 top-40 z-10 ${is600 ? styles.smallScreen : styles.largeScreen}`}>
           <Image

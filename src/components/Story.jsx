@@ -21,7 +21,7 @@ export default function Story() {
             </Box>
           </Grid>
           <Grid item xs={12} sm={6} md={5} lg={5} xl={6} >
-            <Box sx={{ paddingRight: { xs: "", md: "60vh",lg:"60vh" }, width: { xs: "50vh",sm:"40vh", md: "70vh",lg:"70vh" } }}>
+            <Box sx={{ paddingRight: { xs: "", md: "60vh",lg:"0vh" }, width: { xs: "50vh",sm:"40vh", md: "70vh",lg:"70vh" } }}>
 
               <Box sx={{ paddingLeft: { xs: "6vh", md: "25vh" }, paddingTop: { xs: "8vh", md: "10vh" }, textAlign: "left" }}>
                 <Typography
@@ -57,9 +57,9 @@ export default function Story() {
                   The Story Behind our Name <br />
                   <span style={{ color: "#C5C5C5", fontWeight: 300 }}>level Five</span>
                 </Typography>
-                <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "3%", maxWidth: { xs: "18vw", sm: "12vw", md: "10vw", lg: "8vw" }, }} />
+                <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "2%", maxWidth: { xs: "18vw", sm: "12vw", md: "10vw", lg: "8vw" }, }} />
               </Box>
-              <Box sx={{ fontFamily:"IBM Plex Sans Arabic",color:"#C5C5C5",width: { xs: "50vh",sm:"49vh", md: "65.5vh" ,lg:"99vh"}, paddingLeft: { xs: "6vh", md: "25vh" } }}>
+              <Box sx={{ fontFamily:"IBM Plex Sans Arabic",color:"#C5C5C5",width: { xs: "45vh",sm:"49vh", md: "60.5vh" ,lg:"85vh"}, paddingLeft: { xs: "6vh", md: "25vh" } }}>
                 <Typography sx={{ color: "#C5C5C5",fontSize: {xs:"14px",sm:"16px",md:"15px",lg:"18px"},paddingBottom:"10%" }}>
                   Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique, where each level represents a curated space of expertise. Just as one explores unique offering in a boutique, Level Five aspires to deliver specialized and tailored IT solutions at the highest level of proficiency.
 

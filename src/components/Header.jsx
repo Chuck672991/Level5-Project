@@ -13,8 +13,8 @@ export default function Header() {
         <Container>
           <Grid container spacing={2}>
             {/* Left Grid Item */}
-            <Grid item xs={4} md={4} lg={6} xl={6}>
-              <Box sx={{ paddingLeft: '18%', paddingTop: "20%", width: { xs: "35vh", md: "120vh" }, padding:"23%" }}>
+            <Grid item xs={4} md={3} lg={6} xl={6}>
+              <Box sx={{ paddingLeft: '18%', paddingTop: "40%", width: { xs: "35vh", md: "120vh" }, padding:"23%" }}>
                 <Typography sx={{ fontFamily: "IBM Plex Sans Arabic", color: "#FFFF", fontSize: { xs: "1.5vh", md: "2vh" } }}>
                   IT Systems Company
                 </Typography>
@@ -48,7 +48,7 @@ export default function Header() {
             </Grid>
             {/* Right Grid Item */}
             <Grid item xs={8} md={8} lg={6} xl={6} >
-              <Box sx={{ paddingLeft: {xs:'30%',sm:"58%",md:"60%",lg:"50%",xl:"60%"},paddingTop: { xs: "5vh", md: "4vh" },paddingBottom:{xs:'5vh',md:"30vh"},opacity:{xs:"23%",sm:"23%",md:"50%" , lg:"50%",xl:"50%"}, width: { xs: "28vh", md: "70vh" } }}>
+              <Box sx={{ paddingLeft: {xs:'30%',sm:"58%",md:"60%",lg:"45%",xl:"60%"},paddingTop: { xs: "5vh", md: "4vh" },paddingBottom:{xs:'5vh',md:"30vh"},opacity:{xs:"23%",sm:"23%",md:"50%" , lg:"50%",xl:"50%"}, width: { xs: "28vh", md: "70vh" } }}>
                 <Design />
               </Box>
             </Grid>
