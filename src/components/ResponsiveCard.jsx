@@ -16,6 +16,7 @@ import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Button from '@mui/material/Button';
 import Link from 'next/link';
+import Container from './Container';
 SwiperCore.use([Navigation, Pagination]);
 
 
@@ -84,21 +85,14 @@ const handleBack = () => {
 
   return (
     <>
-
+<Container>
       <div style={{ backgroundColor: "#1B1B1F", minHeight: "100%", minWidth: "100%" }}>
         {/* <Box sx={{}}>
           <Typography sx={{}}></Typography>
         </Box> */}
 
         <Box sx={{ flexGrow: 2 }}>
-          <Box sx={{ position: "relative", paddingLeft:{xs:"50%" ,sm:"75%", md:"80%" ,lg:"80%" ,xl:"90%" } }}>
-            <Button size="large" onClick={handleBack} >
-              <KeyboardArrowLeft  />
-            </Button>
-            <Button size="large" onClick={handleNext}>
-              <KeyboardArrowRight />
-            </Button>
-          </Box>
+          
           <Grid container spacing={2.5} justifyContent="end">
             <Grid item xs={12} sm={6} md={4} lg={4} xl={6} order={isMediumScreen2 ? 2 : 1}>
               <Box sx={{ paddingX: isSmallScreen ? "4%" : "8%" }}>
@@ -175,51 +169,100 @@ const handleBack = () => {
             </Grid>
 
             <Grid item xs={12} sm={6 } md={8} lg={8} xl={6} order={isMediumScreen2 ? 2 : 1}>
-              <Paper elevation={3} sx={{ p: 10, textAlign: 'center', backgroundColor: "#1B1B1F" ,border:"none" }}>
+             
+              <Paper elevation={3} sx={{ p: 3, textAlign: 'start', backgroundColor: "#1B1B1F" ,border:"none" }}>
+              <Box sx={{ position: "relative", paddingLeft:{xs:"35%" ,sm:"%", md:"40%" ,lg:"40%" ,xl:"90%" } }}>
+            <Button size="large" onClick={handleBack} >
+              <KeyboardArrowLeft  />
+            </Button>
+            <Button size="large" onClick={handleNext}>
+              <KeyboardArrowRight />
+            </Button>
+          </Box>
                 <Swiper
-                  ref={swiperRef}
+              
+              ref={swiperRef}
                   spaceBetween={10} // Adjust as needed
                   slidesPerView={isSmallScreen ? 1 : isMediumScreen? 1 : 2.4}
                   navigation 
                   pagination={{ clickable: false }}
                 >
+             
+
                   {images.map((image, index) => (
                     <SwiperSlide key={index} >
                       <Card
                         sx={{
-                          Width: {md:"60%"},
+                          maxWidth: "100%",
                           mt: 2,
                           // font:"50px",
-                          height:"320px",
+                          height:"100%",
                           // color: activeStep === index ? '#553EFF' : '#FFFF',
 
-                          bgcolor: activeStep === index ? '#553EFF' : 'black',
+                          bgcolor: activeStep === index +1  ? '#553EFF' : 'black',
 
                         }}
                         onClick={() => handleClickImage(index)}
                       >
-                        <CardContent sx={{fontFamily:"IBM Plex Sans Arabic",}} >
-                          <img
-                            src={image.src}
-                            alt=""
-                            style={{ width: "8vh", paddingBottom: "3vh" , display:"flex", flexDirection:"start" }}
-                            // sx={{display:"flex", flexDirection:"start"}}
-                          />
-                          <Typography variant="" component="div" sx={{ display:"flex", flexDirection:"start",fontSize: { xs: "3vh", md: "5vh" ,sm:"10   vh", }, color: activeStep === index ? '#FFFF' : '#ffff', paddingBottom: "1vh", fontSize: "28px",fontWeight:"600" }}>
-                            {image.label} 
-                            
-                          </Typography>
-                          <Typography sx={{ display:"flex", flexDirection:"start", fontSize: { xs: "vh", md: "2vh" }, color: activeStep === index ? '#FFFF' : '#ffff', paddingBottom: "1vh", fontSize: "20px",fontWeight:"200" }}>
-                          {image.service}
-                          </Typography>
-                          <Typography variant="" color="#FFFF" sx={{display:"flex",  color: activeStep === index ? '#FFFF' : ' #ffff', fontSize: { xs: "2.5vh", md: "14px" }, }}>
-                            {image.description}
-                          </Typography>
-                          <Button  sx={{ display:"flex", flexDirection:"start", color: activeStep === index ? '#FFFF' : ' #553EFF', fontSize:"10px" ,pb:"10%", pt:"20%"}} >
-                            Learn More...
-                          </Button>
-                        </CardContent>
-                      </Card>
+                  <CardContent sx={{ fontFamily: "IBM Plex Sans Arabic" }}>
+    <img
+        src={image.src}
+        alt=""
+        style={{ width: "8vh", paddingBottom: "3vh", display: "flex", flexDirection: "row",justifyContent:"center" }}
+    />
+    <Typography variant="" component="div" sx={{
+        display: "flex",
+        flexDirection: "start",
+        fontSize: {
+            xs: "3.5vh",
+            sm: "3vh", // Adjust for small screens
+            md: "3vh", // Adjust for medium screens
+            lg: "2.5vh", // Adjust for large screens
+        },
+        color: activeStep === index ? '#FFFF' : '#ffff',
+        paddingBottom: "vh",
+        fontWeight: "600"
+    }}>
+        {image.label}
+    </Typography>
+    <Typography sx={{
+        display: "flex",
+        flexDirection: "",
+        fontSize: {
+            xs: "3vh",
+            sm: "2.5vh", // Adjust for small screens
+            md: "2vh", // Adjust for medium screens
+            lg: "1.5vh", // Adjust for large screens
+        },
+        color: activeStep === index ? '#FFFF' : '#ffff',
+        paddingBottom: "vh",
+        fontWeight: "200"
+    }}>
+        {image.service}
+    </Typography>
+    <Typography variant="" color="#FFFF" sx={{
+        display: "",
+        color: activeStep === index ? '#FFFF' : '#ffff',
+        fontSize: {
+            xs: "2.2vh",
+            sm: "1.5vh", // Adjust for small screens
+            md: "2vh", // Adjust for medium screens
+            lg: "1.5vh", // Adjust for large screens
+        },
+    }}>
+        {image.description}
+    </Typography>
+    <Button sx={{
+        display: "flex",
+        flexDirection: "",
+        color: activeStep === index ? '#FFFF' : ' #553EFF',
+        fontSize: {xs:"1.5vh",sm:"",md:"1vh",lg:"1.5vh"},
+        paddingBottom: "10%",
+        paddingTop: "5%"
+    }}>
+        Learn More...
+    </Button>
+</CardContent>    </Card>
                     </SwiperSlide>
                   ))}
                 </Swiper>
@@ -237,6 +280,7 @@ const handleBack = () => {
         </Box>
 
       </div>
+      </Container>
     </>
   );
 }

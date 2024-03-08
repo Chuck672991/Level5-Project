@@ -9,18 +9,19 @@ export default function Header() {
 
   return (
     <>
-      <div style={{  background: 'rgb(28,23,60)', background: 'linear-gradient(-140deg, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 61%, rgba(7,4,66,0.9051995798319328)' }}>
         <Container>
+        <div style={{  background: 'rgb(28,23,60)', background: 'linear-gradient(-140deg, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 61%, rgba(7,4,66,0.9051995798319328)',width:"100%" } }>
+
           <Grid container spacing={2}>
             {/* Left Grid Item */}
             <Grid item xs={4} md={3} lg={6} xl={6}>
-              <Box sx={{ paddingLeft: '18%', paddingTop: "40%", width: { xs: "35vh", md: "120vh" }, padding:"23%" }}>
-                <Typography sx={{ fontFamily: "IBM Plex Sans Arabic", color: "#FFFF", fontSize: { xs: "1.5vh", md: "2vh" } }}>
+              <Box sx={{ paddingLeft: {xs:'16vh',sm:"20vh",md:"30vh"},  width: { xs: "25vh", md: "80vh" }, padding:{xs:"25%",sm:"15%",md:"0%",lg:"23%",xl:""} }}>
+                <Typography sx={{ fontFamily: "IBM Plex Sans Arabic", color: "#FFFF", fontSize: { xs: "1vh", md: "2vh" } }}>
                   IT Systems Company
                 </Typography>
                 <Typography sx={{
                   fontFamily: "",
-                  fontSize: { xs: "2vh", md: "4vh",lg:"6vh" ,xl:"8vh"},
+                  fontSize: { xs: "1vh", md: "4vh",lg:"6vh" ,xl:"8vh"},
                   fontWeight: 600,
                   lineHeight: "",
                   letterSpacing: "0.1em",
@@ -32,12 +33,13 @@ export default function Header() {
                 <Typography sx={{ borderBottom: "0.4vh solid #8868F9", maxWidth: { xs: "16vh", md: "30vh" }, my: "3%" }} />
                 <Typography sx={{
                   fontFamily: "",
-                  fontSize: { xs: "1.5vh", md: "5vh" },
+                  fontSize: { xs: "1vh", md: "2.8vh" },
                   fontWeight: 200,
                   lineHeight: "",
                   letterSpacing: "0.05em",
                   textAlign: "left",
-                  color: "#C5C5C5"
+                  color: "#C5C5C5",
+                maxWidth:"80%"
                 }}>
                   Where technology is finely curated & elegantly tailored for every client’s journey
                 </Typography>
@@ -48,7 +50,7 @@ export default function Header() {
             </Grid>
             {/* Right Grid Item */}
             <Grid item xs={8} md={8} lg={6} xl={6} >
-              <Box sx={{ paddingLeft: {xs:'30%',sm:"58%",md:"60%",lg:"45%",xl:"60%"},paddingTop: { xs: "5vh", md: "4vh" },paddingBottom:{xs:'5vh',md:"30vh"},opacity:{xs:"23%",sm:"23%",md:"50%" , lg:"50%",xl:"50%"}, width: { xs: "28vh", md: "70vh" } }}>
+              <Box sx={{ paddingLeft: {xs:'0%',sm:"0%",md:"10%",lg:"21%",xl:"30%"},paddingTop: { xs: "vh", md: "4vh" },paddingBottom:{xs:'5vh',md:"30vh"},opacity:{xs:"23%",sm:"23%",md:"50%" , lg:"50%",xl:"50%"}, width: { xs: "20vh",sm:"30vh",md: "60vh",lg:"60vh" } }}>
                 <Design />
               </Box>
             </Grid>
@@ -60,8 +62,9 @@ export default function Header() {
             
           </Grid> */}
           </Grid>
+          </div>
+
         </Container>
-      </div>
     </>
   )
 }
