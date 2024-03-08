@@ -3,7 +3,7 @@
   /* width: 1725.6px;
   height: 297.52px; */
 
-  position:absolute;
+  /* position:absolute; */
   animation: fillLogo 4s forwards;
   /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); */
 }
@@ -18,18 +18,18 @@
 }
 /* FilledImage.module.css */
 
-.smallScreen {
+/* .smallScreen {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 90%; /* Adjust the padding-top for small screens */
-}
+  padding-top: 90%; 
+} */
 
 .largeScreen {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: center;
-  padding-top: 20%; /* Default padding-top for large screens */
+  justify-content: center; */
+  /* padding-top: 20%;  */
 }
 
 @media (min-width: 601px) {

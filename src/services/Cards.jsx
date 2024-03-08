@@ -1,147 +1,80 @@
-import { Box } from "@mui/system";
-import React from "react";
-import Slider from "react-slick";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
+import { useEffect } from "react";
+import Swiper from "swiper";
+
+import 'swiper/css'; 
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
-import Stack from "@mui/material/Stack";
-import DeleteIcon from "@mui/icons-material/Delete";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-const images = [
-  { label: 'IT Group Services', src: './1 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers  .   Seamlessly empower growth.' },
-  { label: 'Data  Cloud Services', src: './2 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers.  Seamlessly empower growth.' },
-  { label: 'Emerging Technologies', src: './3 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.' },
-  { label: 'Emerging Technologies', src: './3 (1).svg', description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.' },
-];
-const Cards = () => {
-  const settings = {
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "10px",
-    slidesToShow: 1,
-    speed: 500,
-  };
+import { Box } from "@mui/system";
 
+const Cards = ({data,onClick}) => {
   const bull = (
     <Box
+    
       component="span"
       sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
     >
       •
     </Box>
   );
+  useEffect(() => {
+    const mySwiper = new Swiper('.swiper-container', {
+      speed: 100,
+      spaceBetween:100,
+      // navigation:true,
+      initialSlide: 0,
+      loop: false,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+   
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+
+    return () => {
+      mySwiper.destroy(true, true); 
+    };
+  }, []);
+
   return (
-    <Box>
-      <Box sx={{ marginLeft: "22rem", padding: "1vw 0" }}>
-        <IconButton sx={{ borderRadius: "1px", gap: "1vw" }} aria-label="prev">
-          <KeyboardArrowLeftIcon sx={{ bgcolor: "grey", padding: "4px" }} />
-          <KeyboardArrowRightIcon sx={{ bgcolor: "#5E69FC", padding: "4px" }} />
-        </IconButton>
-        {/* <IconButton sx={{bgcolor:"grey",borderRadius:"1px"}}  aria-label="next" color="primary">
-        </IconButton> */}
-      </Box>
+    <Box sx={{overflowX:"hidden",minWidth:"47vw"}}>
+    
+    <div className="swiper-container">
+      <div className="swiper-wrapper">
+        {data.map((image, index) => (
+          <div className="swiper-slide" onClick={onClick} key={index}>
+<CardContent sx={{
+    minWidth: { xs: '14vw', sm: '10vw', md: '14vw', lg: '18vw' }, 
+    maxWidth: { xs: '14vw', sm: '10vw', md: '14vw', lg: '18vw' }, 
+    minHeight: { xs: '7xsm', sm: '7xsm', md: '14vw', lg: '23vw' }, 
+    backgroundColor: "grey",
+    padding: { xs: '4vw 1vw', sm: '4vw 1vw', md: '4vw 1vw', lg: '4vw 1vw' } 
+}}>              <img src={image.src} alt={image.label} style={{ width: "8vh", paddingBottom: "3vh" }} />
+              <Typography variant="h6">{image.label}</Typography>
+              <Typography color="text.secondary">Services</Typography>
+              <Typography variant="body2">{image.description}</Typography>
+            </CardContent>
+          </div>
+        ))}
 
-      <Box style={{ display: "flex", gap: "1vw" }}>
+      </div>
+    
+      <Box sx={{ marginLeft: "24rem", padding: "1vw 0" ,display:"flex"}}>
+    <IconButton className="swiper-button-prev" sx={{ borderRadius: "1px", gap: "1vw" }} aria-label="prev">
+      <KeyboardArrowLeftIcon  sx={{ bgcolor: "grey", padding: "4px" }} />
+    </IconButton>
+    <IconButton sx={{ borderRadius: "1px", gap: "1vw" }}   aria-label="prev">
+
+      <KeyboardArrowRightIcon  className="swiper-button-next" sx={{ bgcolor: "#5E69FC", padding: "4px" }} />
+      </IconButton>
       
-      {images.map((image, index) => (
-        <div key={index}>
-          <CardContent
-            sx={{ minWidth: "18vw", minHeight: "23vw", bgcolor: "grey",padding:"4vw 1vw" }}
-          >
-            <img
-              src={image.src}
-              alt={image.label}
-              style={{ width: "8vh", paddingBottom: "3vh" }}
-            />
-            <Typography variant="h6" component="div">
-              {image.label}
-            </Typography>
 
-            <Typography color="text.secondary">Services</Typography>
-            <Typography variant="body2">
-              {image.description}
-            </Typography>
-          </CardContent>
-        </div>
-      ))}
-        {/* <div>
-          <CardContent
-            sx={{ minWidth: "18vw", minHeight: "22vw", bgcolor: "grey" }}
-          >
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              Word of the Day
-            </Typography>
-            <Typography variant="h5" component="div">
-              be{bull}nev{bull}o{bull}lent
-            </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              adjective
-            </Typography>
-            <Typography variant="body2">
-              well meaning and kindly.
-              <br />
-              {'"a benevolent smile"'}
-            </Typography>
-          </CardContent>
-        </div>
-        <div>
-          <CardContent
-            sx={{ minWidth: "18vw", minHeight: "22vw", bgcolor: "grey" }}
-          >
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              Word of the Day
-            </Typography>
-            <Typography variant="h5" component="div">
-              be{bull}nev{bull}o{bull}lent
-            </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              adjective
-            </Typography>
-            <Typography variant="body2">
-              well meaning and kindly.
-              <br />
-              {'"a benevolent smile"'}
-            </Typography>
-          </CardContent>
-        </div>
-        <div>
-          <CardContent
-            sx={{ minWidth: "18vw", minHeight: "22vw", bgcolor: "orange" }}
-          >
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              Word of the Day
-            </Typography>
-            <Typography variant="h5" component="div">
-              be{bull}nev{bull}o{bull}lent
-            </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              adjective
-            </Typography>
-            <Typography variant="body2">
-              well meaning and kindly.
-              <br />
-              {'"a benevolent smile"'}
-            </Typography>
-          </CardContent>
-        </div> */}
-      </Box>
+  </Box>
+    </div>
     </Box>
   );
 };

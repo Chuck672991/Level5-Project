@@ -1,11 +1,37 @@
 import Cards from "@/services/Cards";
 import Description from "@/services/Description";
 import { Box } from "@mui/system";
-import React from "react";
+import React, { useState } from "react";
 import styles from "@/services/servicesStyles/card.module.css";
 import { Typography } from "@mui/material";
 
+ const data = [
+  {
+    heading: "Software As a Service (SAAS)",
+    description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.'  
+    ,label: 'IT Group Services', src: './1 (1).svg'},
+    {
+      heading: "X As a Service (SAAS)",
+      description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.'  
+      ,label: 'IT Group Services', src: './3 (1).svg'},
+      {
+        heading: "SAAD As a Service (SAAS)",
+        description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.'  
+        ,label: 'IT Group Services', src: './2 (1).svg'},
+        {
+          heading: "SAAD As a Service (SAAS)",
+          description: 'Collaboratively administrate turnkey channels whereas virtual e-tailers. Seamlessly empower growth.'  
+          ,label: 'IT Group Services', src: './3 (1).svg'},
+       
+];
+
 const ResponsiveCard = () => {
+  // const [selectedCard, setSelectedCard] = useState(null);
+ const [selectedCard, setSelectedCard] = useState(null);
+
+  const handleCardClick = (card) => {
+    setSelectedCard(card);
+  };
   return (
     <Box
       sx={{
@@ -53,9 +79,16 @@ const ResponsiveCard = () => {
           ></Box>
         </Box>
       </Box>
-      <Box sx={{ display: "flex", gap: "2vw", overflowX: "hidden" }}>
-        <Description />
-        <Cards />
+
+      <Box sx={{
+    display: 'flex',
+    flexWrap: { xs: 'wrap',md:'nowrap',lg:'nowrap' }, // Set flexWrap based on the screen size
+    gap: { xs: '0.3vw',md:'1vw',lg:'2vw' },
+    overflowX: 'hidden'
+}}>        <Description data={data} heading={data.heading} description={data.description} />
+        <Cards 
+        // onClick={handleCardClick(data)} 
+        data={data} description={data.description} label={data.label} img={data.src}/>
       </Box>
     </Box>
   );

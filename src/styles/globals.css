@@ -1,7 +1,12 @@
 @import url("https://api.fontshare.com/css?f[]=clash-display&display=swap");
 @import url("https://api.fontshare.com/css?f[]=font-name&display=swap");
 :root {
-    background-color: black;
+    /* background-color: black; */
+   
+ }
+ body{
+  margin: 0;
+  padding: 0;
  }
 #hd-card{
     padding: 2vw 1vw;
@@ -41,6 +46,23 @@
   .dropdown:hover .dropdown-content {
     display: block;
   } 
-  /* .slider-container{
-   display: flex;
-  }  */
+  .swiper-container {
+    width: 190px;
+    height:max-content;
+ 
+} 
+
+.swiper-slide {
+   background-color: purple;
+
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+  

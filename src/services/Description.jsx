@@ -6,24 +6,8 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box } from "@mui/system";
 
-const Description = () => {
-  const data = [
-    {
-      heading: "Software As a Service (SAAS)",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendissedolor sit amet, consectetur adipiscing elit. Suspendissedolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
-    },
-    {
-      heading: "InfraStructire as a Service",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
-    },
-    {
-      heading: "X As a Service (SAAS)",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.",
-    },
-  ];
+const Description = ({description,mainHeading,heading,data}) => {
+
   const [expanded, setExpanded] = useState(Array(data.length).fill(false));
 
   const handleExpansion = (index) => {
@@ -45,7 +29,8 @@ const Description = () => {
           letterSpacing: "2px",
         }}
       >
-        IT Services
+        {/* IT Services */}
+        {mainHeading}
       </Typography>
 
       <div>
