@@ -208,7 +208,7 @@ const handleBack = () => {
     <img
         src={image.src}
         alt=""
-        style={{ width: "8vh", paddingBottom: "3vh", display: "flex", flexDirection: "row",justifyContent:"center" }}
+        style={{ width: "8vh", paddingBottom: "3vh", display: "flex", flexDirection: "row",justifyItems:"center" }}
     />
     <Typography variant="" component="div" sx={{
         display: "flex",
