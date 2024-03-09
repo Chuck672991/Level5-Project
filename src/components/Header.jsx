@@ -48,7 +48,7 @@ export default function Header() {
             </Grid>
             {/* Right Grid Item */}
             <Grid item xs={8} md={8} lg={6} xl={6} >
-              <Box sx={{ paddingLeft: {xs:'30%',sm:"58%",md:"60%",lg:"45%",xl:"60%"},paddingTop: { xs: "5vh", md: "4vh" },paddingBottom:{xs:'5vh',md:"30vh"},opacity:{xs:"23%",sm:"23%",md:"50%" , lg:"50%",xl:"50%"}, width: { xs: "28vh", md: "70vh" } }}>
+              <Box sx={{ paddingLeft: {xs:'30%',sm:"58%",md:"50%",lg:"15%",xl:"60%"},paddingTop: { xs: "5vh", md: "4vh" },paddingBottom:{xs:'5vh',md:"30vh"},opacity:{xs:"23%",sm:"23%",md:"50%" , lg:"50%",xl:"50%"}, width: { xs: "28vh", md: "70vh" } }}>
                 <Design />
               </Box>
             </Grid>
