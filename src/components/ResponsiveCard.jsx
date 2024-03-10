@@ -83,7 +83,7 @@ const ResponsiveCard = () => {
       <Box sx={{
     display: 'flex',
     flexWrap: { xs: 'wrap',md:'nowrap',lg:'nowrap' }, // Set flexWrap based on the screen size
-    gap: { xs: '0.3vw',md:'1vw',lg:'2vw' },
+    gap: { xs: '0.3vw',md:'2vw',lg:'2vw' },
     overflowX: 'hidden'
 }}>        <Description data={data} heading={data.heading} description={data.description} />
         <Cards 
