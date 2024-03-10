@@ -5,4 +5,67 @@
 /* </style> */
 :root {
     background-color: black;
+   
  }
+ body{
+  margin: 0;
+  padding: 0;
+ }
+#hd-card{
+    padding: 2vw 1vw;
+    height: 300px;
+    width: 350px;
+    
+
+}
+#hd-card #hd-label{
+    font-size: 1.5vw;
+    line-height: 2;
+    font-weight: bold;
+}
+#hd-card #hd-desc{
+    font-size: 1.1vw;
+    line-height: 0;
+}
+#hd-card img{
+    height: 60px;
+}
+/* */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  } 
+  .swiper-container {
+    width: 190px;
+    height:max-content;
+ 
+} 
+
+.swiper-slide {
+   background-color: purple;
+
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+  
