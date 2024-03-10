@@ -34,10 +34,10 @@ export function IconLine() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="60vw"
-      height="60vh"
+      width="55vw"
+      height="90vh"
       fill="none"
-      viewBox="0 0 411 401"
+      viewBox="0 0 690 600"
     >
       <path className="line-path" strokeWidth="2" d="M1 0L1 293"></path>
       <path className="line-path" strokeWidth="2" d="M34 0L34 310"></path>

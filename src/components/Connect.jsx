@@ -25,16 +25,16 @@ export default function Connect() {
           height: '50vh', // Set the height to fill the viewport
         }}
       >
-        <Box sx={{ textAlign: 'center', marginBottom: 'rem',paddingLeft:{xs:"25vh",md:"25vh"} }}>
+        <Box sx={{ textAlign: 'center', marginBottom: 'rem',paddingLeft:{xs:"5vh",md:"15vh"} }}>
               
-          <Typography  sx={{ color: '#fff' , fontSize: { xs: '1.5vh', sm: '1.7vh', md: '2vh', lg: '2.2vh', xl: '2.5vh' }                                                                                             }}>
+          <Typography  sx={{ color: '#fff' , fontSize: { xs: '0.8vh', sm: '1.7vh', md: '2vh', lg: '2.2vh', xl: '2.5vh' }                                                                                             }}>
             Please drop us an email at
           </Typography>
           <Typography
             variant="h4"
             sx={{
               color: '#fff',
-              fontSize: { xs: '3vh', sm: '4vh', md: '5vh', lg: '6vh', xl: '7vh' }, // Adjust font size based on breakpoints
+              fontSize: { xs: '1.5vh', sm: '3vh', md: '4vh', lg: '6vh', xl: '7vh' }, // Adjust font size based on breakpoints
             }}
           >
             connect<span style={{ color: '#553EFF' }}>@Level5.com.sa</span>

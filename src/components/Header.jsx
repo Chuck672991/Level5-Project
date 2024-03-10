@@ -4,59 +4,67 @@ import Container from './Container';
 import Design from './Design';
 
 export default function Header() {
-  const isSmallScreen = useMediaQuery('(min-width:600px)');
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isLgScreen = useMediaQuery('(min-width:1800px)');
 
   return (
     <>
-      <div style={{paddingRight:"vh",background: 'linear-gradient(241deg, rgba(0,0,0,1) 10%, rgba(7,4,66,0.9051995798319328) 100%)',}}>
-      <Container>
-       <Grid container spacing={2}>
-          {/* Left Grid Item */}
-          <Grid item xs={6} md={6}>
-            <Box sx={{ paddingLeft: '20%', paddingTop: { xs: "15vh", md: "40vh" }, height: "40px", width: { xs: "35vh", md: "120vh" } }}>
-              <Typography sx={{ fontFamily: "IBM Plex Sans Arabic", color: "#FFFF", fontSize: { xs: "1.5vh", md: "2vh" } }}>
-                IT Systems Company
-              </Typography>
-              <Typography sx={{
-                fontFamily: "",
-                fontSize: { xs: "2vh", md: "6vh" },
-                fontWeight: 600,
-                lineHeight: "",
-                letterSpacing: "0.1em",
-                textAlign: "left",
-                color: "#FFFF",
-              }}>
-                An IT Boutique House
-              </Typography>
-              <Typography sx={{ borderBottom: "0.4vh solid #8868F9", maxWidth: { xs: "16vh", md: "48vh" } }} />
-              <Typography sx={{
-                fontFamily: "",
-                fontSize: { xs: "1.5vh", md: "5vh" },
-                fontWeight: 200,
-                lineHeight: "",
-                letterSpacing: "0.05em",
-                textAlign: "left",
-                color: "#C5C5C5"
-              }}>
-                Where technology is finely curated & elegantly tailored for every client’s journey
-              </Typography>
-            </Box>
-          </Grid>
-          {/* Right Grid Item */}
-          <Grid item xs={6} md={6}>
-            <Box sx={{ paddingLeft: '40%', paddingTop: { xs: "5vh", md: "10vh" }, width: { xs: "28vh", md: "70vh" } }}>
-              <Design />
-            </Box>
-          </Grid>
-          {/* Bottom Grid Item */}
-          <Grid item xs={12}>
+        <Container>
+        <div style={{  background: 'rgb(28,23,60)', background: 'linear-gradient(-140deg, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 61%, rgba(7,4,66,0.9051995798319328)',width:"100%" } }>
+
+          <Grid container spacing={2}>
+            {/* Left Grid Item */}
+            <Grid item xs={4} md={3} lg={6} xl={6}>
+              <Box sx={{ paddingLeft: {xs:'16vh',sm:"20vh",md:"30vh"},  width: { xs: "25vh", md: "80vh" }, padding:{xs:"25%",sm:"15%",md:"0%",lg:"23%",xl:""} }}>
+                <Typography sx={{ fontFamily: "IBM Plex Sans Arabic", color: "#FFFF", fontSize: { xs: "1vh", md: "2vh" } }}>
+                  IT Systems Company
+                </Typography>
+                <Typography sx={{
+                  fontFamily: "",
+                  fontSize: { xs: "1vh", md: "4vh",lg:"6vh" ,xl:"8vh"},
+                  fontWeight: 600,
+                  lineHeight: "",
+                  letterSpacing: "0.1em",
+                  textAlign: "left",
+                  color: "#FFFF",
+                }}>
+                  An IT Boutique House
+                </Typography>
+                <Typography sx={{ borderBottom: "0.4vh solid #8868F9", maxWidth: { xs: "16vh", md: "30vh" }, my: "3%" }} />
+                <Typography sx={{
+                  fontFamily: "",
+                  fontSize: { xs: "1vh", md: "2.8vh" },
+                  fontWeight: 200,
+                  lineHeight: "",
+                  letterSpacing: "0.05em",
+                  textAlign: "left",
+                  color: "#C5C5C5",
+                maxWidth:"80%"
+                }}>
+                  Where technology is finely curated & elegantly tailored for every client’s journey
+                </Typography>
+              </Box>
+              {/* <Box  >
+                <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="level five logo " style={{ paddingTop:isLgScreen?"18%":"20%",   width:isSmallScreen?"20vw":"25vw" }} sx={{paddingLeft:{xs:"4vh", sm:"2.5vh" , md:"15vh",lg:"26vh",xl:"28vh"}}} />
+              </Box> */}
+            </Grid>
+            {/* Right Grid Item */}
+            <Grid item xs={8} md={8} lg={6} xl={6} >
+              <Box sx={{ paddingLeft: {xs:'0%',sm:"0%",md:"10%",lg:"21%",xl:"30%"},paddingTop: { xs: "vh", md: "4vh" },paddingBottom:{xs:'5vh',md:"30vh"},opacity:{xs:"23%",sm:"23%",md:"50%" , lg:"50%",xl:"50%"}, width: { xs: "20vh",sm:"30vh",md: "60vh",lg:"60vh" } }}>
+                <Design />
+              </Box>
+            </Grid>
+            {/* Bottom Grid Item */}
+            {/* <Grid item xs={12}>
                 
-              <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="" style={{ paddingLeft: "4.5vh", width: "45vh", }} />
+          <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="level five logo " style={{ paddingBottom:"10%" ,paddingLeft: isSmallScreen ? "15.5vh" : "4.5vh", width: isSmallScreen ? "30vh" : "15vh" }} />
+
             
+          </Grid> */}
           </Grid>
-        </Grid>
-      </Container>
-      </div>
+          </div>
+
+        </Container>
     </>
   )
 }

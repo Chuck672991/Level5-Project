@@ -1,7 +1,10 @@
-@import url("https://api.fontshare.com/css?f[]=clash-display&display=swap");
+/* @import url("https://api.fontshare.com/css?f[]=clash-display&display=swap"); */
 @import url("https://api.fontshare.com/css?f[]=font-name&display=swap");
+/* <style> */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+/* </style> */
 :root {
-    /* background-color: black; */
+    background-color: black;
    
  }
  body{

@@ -1,3 +1,4 @@
+/* FilledImage.module.css */
 
 .logoContainer {
   /* width: 1725.6px;
@@ -16,7 +17,6 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }
-/* FilledImage.module.css */
 
 /* .smallScreen {
   display: flex;
@@ -37,13 +37,38 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 20%; /* Padding-top for screens larger than 600px */
+    padding-top: 20%;
   }
 
   .largeScreen {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 20%; /* Default padding-top for large screens */
+    padding-top: 20%;
+  }
+}
+
+.main-page {
+  animation: slideUp 3s ease-in-out; /* Add slide-up animation */
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+/* Your other CSS styles */
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
