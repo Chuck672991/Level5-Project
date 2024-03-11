@@ -97,7 +97,7 @@ export default function Navbar() {
             </Box>
 
             <MenuIcon
-              sx={{ position: "absolute", right: "10px", top: "30px", width:{xs:"10%", sm:"30%", md: "25%", lg:"35%", xl:"15%"}, height:{xs:"35%", sm:"40%", md:"43%", lg:"50%", xl:"65%"} }}
+              sx={{ position: "absolute", right: "10px", top: "30px", width:{xs:"10%", sm:"30%", md: "25%", lg:"18%", xl:"15%"}, height:{xs:"35%", sm:"40%", md:"43%", lg:"50%", xl:"65%"} }}
               onMouseEnter={() => setHover(!hover)}
             />
           </div>
