@@ -87,7 +87,7 @@ const ResponsiveCard = () => {
     overflowX: 'hidden'
 }}>        <Description data={data} heading={data.heading} description={data.description} />
         <Cards 
-        // onClick={handleCardClick(data)} 
+        // onClick={handleCardClick(data)} n 
         data={data} description={data.description} label={data.label} img={data.src}/>
       </Box>
     </Box>

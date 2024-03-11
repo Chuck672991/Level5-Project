@@ -18,12 +18,12 @@
   }
 }
 
-/* .smallScreen {
+.smallScreen {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding-top: 90%; 
-} */
+}
 
 .largeScreen {
   /* display: flex;

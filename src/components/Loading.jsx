@@ -19,7 +19,7 @@ const Loading = ({ id }) => {
     >
       <div>
         <div
-          style={{ background: "black" ,height:"100vh"}}
+          style={{ background: "black" ,height:"100vh",position:"relative"}}
           className={`
        
         
@@ -34,13 +34,17 @@ const Loading = ({ id }) => {
             style={{ marginLeft: "10vw" }}
             className={styles.logoContainer}
           />
-          {/* <Image
+          <Image
             width={is600 ? 300 : 700.6} // Adjusted width based on screen size
             height={is600 ? 50 : 100.52} // Adjusted height based on screen size
             src={EmptyLandingLogo}
             alt="EmptyLandingLogo"
-            className="z-30 absolute top-0 left-0"
-          /> */}
+            style={{position:"absolute",left:'36.6vw',
+            //  translate:'-50% -50%'
+            }
+            }
+
+/>
         </div>
       </div>
     </div>
