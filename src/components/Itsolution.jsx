@@ -77,11 +77,11 @@ export default function Itsolution() {
           </Grid>
           <Grid item xs={12} md={6} lg={6} xl={6}>
             <Box sx={{ paddingRight: { xs: "0", md: "12vh" },  paddingTop: isMobileScreen ? "8%" : "1%", fontWeight: "300",  }}>
-              <Typography sx={{ color: "#C5C5C5", fontFamily: "IBM Plex Sans Arabic", fontSize: {xs:"14px",sm:"16px",md:"15px",lg:"18px"} }}>
+              <Typography sx={{ color: "#C5C5C5", fontFamily: "IBM Plex Sans Arabic", fontSize: {xs:"1vh",sm:"1.5vh",md:"2vh",lg:"2.5vhpx"} }}>
                 We aspire to be the premier IT solutions facilitator in the Kingdom, connecting clients with specialized expertise while maintaining operational agility and cost-effectiveness.
               </Typography>
               <br />
-              <Typography sx={{ color: "#C5C5C5", fontFamily: "IBM Plex Sans Arabic", fontSize: {xs:"14px",sm:"16px",md:"15px",lg:"18px"} }}>
+              <Typography sx={{ color: "#C5C5C5", fontFamily: "IBM Plex Sans Arabic", fontSize: {xs:"0.8",sm:"1vh",md:"1.5vh",lg:"2vhpx"} }}>
                 Headquartered in Riyadh, Kingdom of Saudi Arabia, Level Five is committed to providing innovative, tailored IT solutions by fostering strategic partnerships, leveraging external expertise, and optimizing resource allocation.
                 <br />
                 <br />
