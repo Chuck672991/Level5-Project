@@ -8,6 +8,7 @@ import {
   MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Box } from "@mui/system";
 
 const links = [
   { title: "About us", url: "/" },
@@ -17,6 +18,11 @@ const links = [
 ];
 
 export default function Navbar() {
+  
+  const xs = ("(max-width:599px)");
+  const sm = ("(max-width:899px)");
+  const md = ("(max-width:1199px)");
+
   const [anchorEl, setAnchorEl] = useState(null);
   const [hover, setHover] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -59,15 +65,20 @@ export default function Navbar() {
         >
 
           <div style={{ backgroundColor: "inherit" }}>
-            <div
-              style={{
+            <Box
+              sx={{
+                paddingRight: { xs: "0.2%", sm: "12%", md: "13%", lg: "", xl: "" },
+                fontSize: { xs: "65%", sm: "85%", md:"110%", lg:"130%", xl:"200%" },
+                width: { xs: "75%", sm: "68%", md:"70%", },
+                display: "flex",
+                justifyContent: "space-evenly",
                 overflow:"hidden",
-                position: "absolute",
+                position: "fixed",
                 background: "inherit",
-                left: "20%",
-                top: hover ? "0" : "-100%",
+                // left: "20%",
+                top: hover ? "0.1" : "-100%",
                 transition: "0.5s ease",
-                padding: "1vw 2vw",
+                padding: {xs:"2vw 0.5vw", sm: "0.8vw 8vw", md:"0.2vw 8vw", lg:"0.4vw 9vw", xl: "0.2vw 14vw"}
               }}
             >
               {links.map((link, index) => (
@@ -75,7 +86,7 @@ export default function Navbar() {
                   key={index}
                   href={link.url}
                   style={{
-                    marginRight: "80px",
+                    // marginRight: "80px",
                     textDecoration: "none",
                     color: "inherit",
                   }}
@@ -83,10 +94,10 @@ export default function Navbar() {
                   {link.title}
                 </a>
               ))}
-            </div>
+            </Box>
 
             <MenuIcon
-              style={{ position: "absolute", right: "10px", top: "10px" }}
+              sx={{ position: "absolute", right: "10px", top: "30px", width:{xs:"10%", sm:"30%", md: "25%", lg:"35%", xl:"15%"}, height:{xs:"35%", sm:"40%", md:"43%", lg:"50%", xl:"65%"} }}
               onMouseEnter={() => setHover(!hover)}
             />
           </div>
@@ -98,8 +109,8 @@ export default function Navbar() {
               open={Boolean(anchorEl)}
               onClose={handleClose}
               anchorOrigin={{
-                vertical: "top",
-                horizontal: "left",
+                    vertical: "top",
+                    horizontal: "left",
               }}
               transformOrigin={{
                 vertical: "top",
