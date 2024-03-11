@@ -37,7 +37,7 @@ export default function Itsolution() {
                   fontSize:{xs:"25px", sm:"19px",md:"23px",lg:"25px",xl:"30px"},
                   // fontSize: isMobileScreen ? "3vh" : isMediumScreen ? "2.5vh" : "4vh",
                   fontWeight: "600",
-                  lineHeight: "2vh",
+                  lineHeight: "4vh",
                   letterSpacing: "0em",
                   textAlign: "left",
                   color: "#F5F5F5",
