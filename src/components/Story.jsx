@@ -17,14 +17,14 @@ export default function Story() {
         {/* <Grid item xs={12} md={6}></Grid> */}
         <Grid container spacing={2} >
           <Grid item xs={12} sm={6}  md={6} lg={5} xl={6} >
-            <Box sx={{opacity:{xs:"30%",sm:"40%",md:"50%",lg:"50%",xl:"50%"}, paddingRight: { xs: "vh", md: "60vh", lg:"50vh",xl:"80vh" },width:{xs:"30vh"} ,height: { xs: "10vh", md: "vh" },paddingButton:{xs:"10%"} }}>
+            <Box sx={{opacity:{xs:"30%",sm:"40%",md:"50%",lg:"50%",xl:"50%"}, paddingLeft: { xs: "vh", md: "5vh", lg:"5vh",xl:"5vh" },paddingTop:{xl:"15vh"},width:{xs:"3  0vh"} ,height: { xs: "10vh", md: "vh"},paddingButton:{xs:"10%"} }}>
               <Design2 />
             </Box>
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={5} xl={6} >
-            <Box sx={{  width: { xs: "30vh",sm:"20vh", md: "40vh",lg:"50vh" } }}>
+            <Box sx={{   }}>
 
-              <Box sx={{ paddingLeft: { xs: "2vh", md: "vh" }, paddingTop: { xs: "8vh", md: "10vh" }, textAlign: "" }}>
+              <Box sx={{ paddingLeft: { xs: "2vh", md: "20vh", xl:"2vh" }, paddingTop: { xs: "8vh", md: "10vh", xl:"10vh" }, textAlign: "" }}>
                 <Typography
                   sx={{
                     color: "#F5F5F5",
@@ -34,9 +34,9 @@ export default function Story() {
                     fontSize: {
                       xs: "8px", // for extra-small screens
                       sm: "8px", // for small screens
-                      md: "12px", // for medium screens
+                      md: "13px", // for medium screens
                       lg: "10px", // for large screens
-                      xl: "20px"  // for extra-large screens
+                      xl: "30px"  // for extra-large screens
                     },
                     // Add other styles as needed
                   }}
@@ -46,7 +46,7 @@ export default function Story() {
                 <Typography
                   sx={{
                     fontFamily: "IBM Plex Sans Arabic",
-                    fontSize: { xs: "2.5vh",sm:"1.5vh" ,md: "2.5vh" },
+                    fontSize: { xs: "2.5vh",sm:"1.5vh" ,md: "3.5vh",lg:"5vh", xl:"3vh" },
                     fontWeight: "600",
                     lineHeight: {xs:"vh "},
                     letterSpacing: "0em",
@@ -58,10 +58,10 @@ export default function Story() {
                   The Story Behind our Name <br />
                   <span style={{ color: "#C5C5C5", fontWeight: 300 }}>level Five</span>
                 </Typography>
-                <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "2%", maxWidth: { xs: "18vw", sm: "12vw", md: "10vw", lg: "8vw" }, }} />
+                <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "0.5%", maxWidth: { xs: "18vw", sm: "12vw", md: "10vw", lg: "8vw", xl:"8vw" }, }} />
               </Box>
-              <Box sx={{ fontFamily:"IBM Plex Sans Arabic",color:"#C5C5C5",width: { xs: "28vh",sm:"20vh", md: "35.5vh" ,lg:"58vh"}, paddingLeft: { xs: "2vh", md: "vh" } }}>
-                <Typography sx={{ color: "#C5C5C5",fontSize: {xs:"14px",sm:"16px",md:"15px",lg:"18px"},paddingBottom:"10%" }}>
+              <Box sx={{ fontFamily:"IBM Plex Sans Arabic",color:"#C5C5C5", paddingLeft: { xs: "2vh", md: "20vh", xl:"1.5vh" }, my:"5%" }}>
+                <Typography sx={{ color: "#C5C5C5",fontSize: {xs:"14px",sm:"16px",md:"15px",lg:"18px", xl:"30px"},paddingBottom:"10%" }}>
                   Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique, where each level represents a curated space of expertise. Just as one explores unique offering in a boutique, Level Five aspires to deliver specialized and tailored IT solutions at the highest level of proficiency.
 
                   <br /><br />
