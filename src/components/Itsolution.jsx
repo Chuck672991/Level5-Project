@@ -13,10 +13,13 @@ export default function Itsolution() {
   return (
       <Container>
     <div style={{ backgroundColor: "#000" }}>
+<br />
+<br />
+<br />
 
-        <Grid container spacing={2} sx={{ paddingLeft: isMobileScreen ? "2vh" : "3vh" }}>
+        <Grid container spacing={2} sx={{ paddingLeft: isMobileScreen ? "2vh" : "5vh" }}>
           <Grid item xs={12} md={6} lg={6} xl={6}>
-            <Box padding={{ xs: "vh", md: "vh" }}>
+            <Box paddingLeft ={{ xs: "vh", md: "2vh",lg:"6vh",xl:"10vh" }}>
               <Typography
                 sx={{
                   color: "#F5F5F5",
@@ -31,7 +34,7 @@ export default function Itsolution() {
               <Typography
                 sx={{
                   fontFamily: "IBM Plex Sans Arabic",
-                  fontSize:{xs:"13px", sm:"19px",md:"23px",lg:"25px",xl:"30px"},
+                  fontSize:{xs:"25px", sm:"19px",md:"23px",lg:"25px",xl:"30px"},
                   // fontSize: isMobileScreen ? "3vh" : isMediumScreen ? "2.5vh" : "4vh",
                   // width:{xs:"30vh",sm:"50vh",md:"60vh",lg:"60vh"},
                   fontWeight: "600",
@@ -47,7 +50,7 @@ export default function Itsolution() {
               </Typography>
               <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "2%", maxWidth: { xs: "34vw", md: "12vw" } }} />
               <Box sx={{
-                paddingTop: { xs: "2vh", sm: "3vh", md: "15vh" },
+                paddingTop: { xs: "2vh", sm: "3vh", md: "15vh",lg:"8vh" },
                 paddingLeft: { xs: "0vh", sm: "vh", md: "0vh" },
                 paddingRight: { xs: "vh", sm: "vh" }
 
@@ -58,14 +61,12 @@ export default function Itsolution() {
                   sx={{
                     backgroundColor: "#553EFF",
                     borderRadius: {xs:"4px"},
-                    width: { xs: '40%', sm: '50%', md: "80%", lg: '40%' },
-                    height: { xs: '4vh', sm: '46px', md: "50px", lg: "60px" },
                     fontFamily: "IBM Plex Sans Arabic",
                     paddingLeft: {
-                      xs: "vh", sm: "18px", md: "7px",lg:"1px"
+                      xs: "vh", sm: "px", md: "px",lg:"px"
                     },
                     fontSize: {
-                      xs: "5.5px", sm: "14px", md: "16px",lg:"14px"
+                      xs: "5.5px", sm: "12px", md: "10px",lg:"8px"
                     }
                   }}
                 >
