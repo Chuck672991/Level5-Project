@@ -17,9 +17,9 @@ export default function Itsolution() {
 <br />
 <br />
 
-        <Grid container spacing={2} sx={{ paddingLeft: isMobileScreen ? "2vh" : "3vh" }}>
+        <Grid container spacing={2} sx={{ paddingLeft: isMobileScreen ? "2vh" : "5vh" }}>
           <Grid item xs={12} md={6} lg={6} xl={6}>
-            <Box padding={{ xs: "vh", md: "vh" }}>
+            <Box paddingLeft ={{ xs: "vh", md: "6vh" }}>
               <Typography
                 sx={{
                   color: "#F5F5F5",
@@ -36,7 +36,6 @@ export default function Itsolution() {
                   fontFamily: "IBM Plex Sans Arabic",
                   fontSize:{xs:"13px", sm:"19px",md:"23px",lg:"25px",xl:"30px"},
                   // fontSize: isMobileScreen ? "3vh" : isMediumScreen ? "2.5vh" : "4vh",
-                  width:{xs:"30vh",sm:"50vh",md:"60vh",lg:"60vh"},
                   fontWeight: "600",
                   lineHeight: "20px",
                   letterSpacing: "0em",
@@ -61,14 +60,12 @@ export default function Itsolution() {
                   sx={{
                     backgroundColor: "#553EFF",
                     borderRadius: {xs:"4px"},
-                    width: { xs: '40%', sm: '50%', md: "80%", lg: '40%' },
-                    height: { xs: '4vh', sm: '46px', md: "50px", lg: "60px" },
                     fontFamily: "IBM Plex Sans Arabic",
                     paddingLeft: {
-                      xs: "vh", sm: "18px", md: "7px",lg:"1px"
+                      xs: "vh", sm: "px", md: "px",lg:"px"
                     },
                     fontSize: {
-                      xs: "5.5px", sm: "14px", md: "16px",lg:"14px"
+                      xs: "5.5px", sm: "12px", md: "10px",lg:"8px"
                     }
                   }}
                 >
@@ -79,7 +76,7 @@ export default function Itsolution() {
             </Box>
           </Grid>
           <Grid item xs={12} md={6} lg={6} xl={6}>
-            <Box sx={{ paddingLeft: { xs: "0", md: "0vh" }, width: { xs: "30vh",sm:"40vh", md: "35.5vh" ,lg:"80vh"}, paddingTop: isMobileScreen ? "8%" : "1%", fontWeight: "300",  }}>
+            <Box sx={{ paddingRight: { xs: "0", md: "12vh" },  paddingTop: isMobileScreen ? "8%" : "1%", fontWeight: "300",  }}>
               <Typography sx={{ color: "#C5C5C5", fontFamily: "IBM Plex Sans Arabic", fontSize: {xs:"14px",sm:"16px",md:"15px",lg:"18px"} }}>
                 We aspire to be the premier IT solutions facilitator in the Kingdom, connecting clients with specialized expertise while maintaining operational agility and cost-effectiveness.
               </Typography>

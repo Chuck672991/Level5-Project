@@ -17,14 +17,14 @@ export default function Story() {
         {/* <Grid item xs={12} md={6}></Grid> */}
         <Grid container spacing={2} >
           <Grid item xs={12} sm={6}  md={6} lg={5} xl={6} >
-            <Box sx={{opacity:{xs:"30%",sm:"40%",md:"50%",lg:"50%",xl:"50%"}, paddingRight: { xs: "vh", md: "60vh", lg:"50vh",xl:"80vh" },width:{xs:"30vh"} ,height: { xs: "10vh", md: "vh" },paddingButton:{xs:"10%"} }}>
+            <Box sx={{opacity:{xs:"30%",sm:"40%",md:"50%",lg:"50%",xl:"50%"}, paddingRight: { xs: "vh", md: "0vh", lg:"0vh",xl:"0vh" } ,height: { xs: "10vh", md: "vh" },paddingButton:{xs:"10%"} }}>
               <Design2 />
             </Box>
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={5} xl={6} >
-            <Box sx={{  width: { xs: "30vh",sm:"20vh", md: "40vh",lg:"50vh" } }}>
+            <Box  >
 
-              <Box sx={{ paddingLeft: { xs: "2vh", md: "vh" }, paddingTop: { xs: "8vh", md: "10vh" }, textAlign: "" }}>
+              <Box sx={{ paddingLeft: { xs: "2vh", md: "20vh" }, paddingTop: { xs: "8vh", md: "10vh" }, textAlign: "" }}>
                 <Typography
                   sx={{
                     color: "#F5F5F5",
@@ -60,7 +60,7 @@ export default function Story() {
                 </Typography>
                 <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "2%", maxWidth: { xs: "18vw", sm: "12vw", md: "10vw", lg: "8vw" }, }} />
               </Box>
-              <Box sx={{ fontFamily:"IBM Plex Sans Arabic",color:"#C5C5C5",width: { xs: "28vh",sm:"20vh", md: "40.5vh" ,lg:"90vh"}, paddingLeft: { xs: "2vh", md: "vh" } }}>
+              <Box sx={{ fontFamily:"IBM Plex Sans Arabic",color:"#C5C5C5", paddingLeft: { xs: "2vh", md: "20vh" } }}>
                 <Typography sx={{ color: "#C5C5C5",fontSize: {xs:"14px",sm:"16px",md:"15px",lg:"18px"},paddingBottom:"10%" }}>
                   Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique, where each level represents a curated space of expertise. Just as one explores unique offering in a boutique, Level Five aspires to deliver specialized and tailored IT solutions at the highest level of proficiency.
 
