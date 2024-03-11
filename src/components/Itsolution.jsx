@@ -33,13 +33,13 @@ export default function Itsolution() {
                   fontFamily: "IBM Plex Sans Arabic",
                   fontSize:{xs:"13px", sm:"19px",md:"23px",lg:"25px",xl:"30px"},
                   // fontSize: isMobileScreen ? "3vh" : isMediumScreen ? "2.5vh" : "4vh",
-                  width:{xs:"30vh",sm:"50vh",md:"60vh",lg:"60vh"},
+                  // width:{xs:"30vh",sm:"50vh",md:"60vh",lg:"60vh"},
                   fontWeight: "600",
-                  lineHeight: "20px",
+                  lineHeight: "5vh",
                   letterSpacing: "0em",
                   textAlign: "left",
                   color: "#F5F5F5",
-                  // gap: "vh"
+                  //  gap: "vh"
                 }}
               >
                 Tailored IT Solutions in Riyadh <br />
@@ -76,7 +76,7 @@ export default function Itsolution() {
             </Box>
           </Grid>
           <Grid item xs={12} md={6} lg={6} xl={6}>
-            <Box sx={{ paddingLeft: { xs: "0", md: "0vh" }, width: { xs: "30vh",sm:"40vh", md: "35.5vh" ,lg:"80vh"}, paddingTop: isMobileScreen ? "8%" : "18%", fontWeight: "300",  }}>
+            <Box sx={{ paddingLeft: { xs: "0", md: "0vh" },  paddingTop: isMobileScreen ? "8%" : "18%", fontWeight: "300",  }}>
               <Typography sx={{ color: "#C5C5C5", fontFamily: "IBM Plex Sans Arabic", fontSize: {xs:"14px",sm:"16px",md:"15px",lg:"18px"} }}>
                 We aspire to be the premier IT solutions facilitator in the Kingdom, connecting clients with specialized expertise while maintaining operational agility and cost-effectiveness.
               </Typography>
