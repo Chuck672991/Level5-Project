@@ -29,7 +29,7 @@ export default function Footer() {
   return (
     <Box borderTop= '0.5px solid #FFFFFFB2' >
 
-    <Grid container spacing={1.5} sx={{ paddingTop: '3vh' }}>
+    <Grid container spacing={1.5} sx={{ paddingTop: '5vh' }}>
       <Grid item xs={12} sm={4} md={4} lg={3}>
       <Box
   display="flex"
@@ -40,24 +40,25 @@ export default function Footer() {
     alt=""
     style={{
       paddingLeft:inExtraSmallScreen?"35%": inSmallScreen?"2%":'10%',
-      maxHeight: { xs: '4vh', sm: '8vh' }, // Adjust based on screen size
-      maxWidth: '30%', // Ensure image doesn't exceed container width
-      width: 'auto', // Maintain aspect ratio
-      height: 'auto', // Maintain aspect ratio
+      height: { xs: '4vh', sm: '8vh', md: "10vh", lg:"14vh" }, // Adjust based on screen size
+      width: '50%', // Ensure image doesn't exceed container width
+      
+      // width: 'auto', // Maintain aspect ratio
+      // height: 'auto', // Maintain aspect ratio
     }}
   />
 </Box>
       </Grid>
       <Grid item xs={12} sm={4} md={4} lg={3}>
-        <Box display="flex" justifyContent={'space-around'} paddingRight={'45%'} >
-          <Typography variant="body1" style={{ color: "#FFFFFFB2",  paddingLeft: inExtraSmallScreen? "80%": inSmallScreen? "5%": inMediumScreen?"10%": inLargeScreen?"15%": inLmScreen?"110%": inExtraLargeScreen?"150%":"", fontSize:inExtraSmallScreen?"75%":inSmallScreen?"70%":inMediumScreen?"60%":inLargeScreen?"100%": inLmScreen?"125%":inExtraLargeScreen?"150%":"", width: '34.5%' }}>
+        <Box display="flex" justifyContent={'space-evenly'} paddingRight={'45%'} width={'75%'} >
+          <Typography variant="body1" style={{ color: "#FFFFFFB2",  paddingLeft: inExtraSmallScreen? "80%": inSmallScreen? "5%": inMediumScreen?"10%": inLargeScreen?"15%": inLmScreen?"110%": inExtraLargeScreen?"150%":"", fontSize:inExtraSmallScreen?"75%":inSmallScreen?"70%":inMediumScreen?"60%":inLargeScreen?"100%": inLmScreen?"125%":inExtraLargeScreen?"150%":"", fontWeight:'400' }}>
             <Link href="/support" color="inherit" underline="none">Support</Link>
           </Typography>
-          <Typography variant="body1" style={{ color: "#FFFFFFB2",  paddingLeft: inSmallScreen? "10%":inMediumScreen?"13%": inLargeScreen?"7%": inLmScreen?"20%": inExtraLargeScreen?"15%":"",  fontSize:inExtraSmallScreen?"75%":inSmallScreen?"70%":inMediumScreen?"60%":inLargeScreen?"100%": inLmScreen?"125%":inExtraLargeScreen?"150%":"", width: '95%' , whiteSpace:'nowrap' }}>
+          <Typography variant="body1" style={{ color: "#FFFFFFB2",  paddingLeft: inSmallScreen? "11%":inMediumScreen?"10%": inLargeScreen?"7%": inLmScreen?"28%": inExtraLargeScreen?"25%":"", fontSize:inExtraSmallScreen?"75%":inSmallScreen?"70%":inMediumScreen?"60%":inLargeScreen?"100%": inLmScreen?"125%":inExtraLargeScreen?"150%":"",  whiteSpace:'nowrap' , fontWeight:'400'}}>
+              <Link href="/privacy-policy" color="inherit" underline="none">Privacy Policy</Link>
+            </Typography>
+          <Typography variant="body1" style={{ color: "#FFFFFFB2",  paddingLeft: inSmallScreen? "10%":inMediumScreen?"13%": inLargeScreen?"7%": inLmScreen?"20%": inExtraLargeScreen?"15%":"",  fontSize:inExtraSmallScreen?"75%":inSmallScreen?"70%":inMediumScreen?"60%":inLargeScreen?"100%": inLmScreen?"125%":inExtraLargeScreen?"150%":"",  whiteSpace:'nowrap', fontWeight:'400' }}>
             <Link href="/support-privacy-policy" color="inherit" underline="none">Terms and Condition</Link>
-          </Typography>
-        <Typography variant="body1" style={{ color: "#FFFFFFB2",  paddingLeft: inSmallScreen? "11%":inMediumScreen?"10%": inLargeScreen?"7%": inLmScreen?"28%": inExtraLargeScreen?"25%":"", fontSize:inExtraSmallScreen?"75%":inSmallScreen?"70%":inMediumScreen?"60%":inLargeScreen?"100%": inLmScreen?"125%":inExtraLargeScreen?"150%":"", width:'100%', whiteSpace:'nowrap' }}>
-            <Link href="/privacy-policy" color="inherit" underline="none">Privacy Policy</Link>
           </Typography>
         </Box>
       </Grid>

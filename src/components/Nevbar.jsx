@@ -64,7 +64,7 @@ export default function Navbar() {
           sx={{backgroundColor: "inherit",boxSizing:"border-box" }}
         >
 
-          <div style={{ backgroundColor: "inherit" }}>
+          <div style={{ backgroundColor: "transparent" }}>
             <Box
               sx={{
                 paddingRight: { xs: "0.2%", sm: "12%", md: "13%", lg: "", xl: "" },
