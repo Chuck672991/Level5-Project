@@ -68,7 +68,7 @@ export default function Navbar() {
             <Box
               sx={{
                 paddingRight: { xs: "0.2%", sm: "12%", md: "13%", lg: "", xl: "" },
-                fontSize: { xs: "65%", sm: "85%", md:"90%", lg:"100%", xl:"150%" },
+                fontSize: { xs: "50%", sm: "85%", md:"90%", lg:"100%", xl:"150%" },
                 width: { xs: "75%", sm: "68%", md:"70%", },
                 display: "flex",
                 justifyContent: "space-evenly",
@@ -97,7 +97,7 @@ export default function Navbar() {
             </Box>
 
             <MenuIcon
-              sx={{ position: "absolute", right: "10px", top: "30px", width:{xs:"10%", sm:"30%", md: "25%", lg:"10%", xl:"15%"}, height:{xs:"35%", sm:"40%", md:"43%", lg:"50%", xl:"65%"} }}
+              sx={{ position: "absolute", right: "10px", top: "30px", width:{xs:"3%", sm:"6.5%", md: "9%", lg:"7%", xl:"7.5%"}, height:{xs:"35%", sm:"40%", md:"43%", lg:"50%", xl:"65%"} }}
               onMouseEnter={() => setHover(!hover)}
             />
           </div>
