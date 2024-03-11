@@ -29,7 +29,7 @@ export default function Connect() {
           height: '50vh', // Set the height to fill the viewport
         }}
       >
-        <Box sx={{ textAlign: 'center', marginBottom: 'rem',paddingLeft:{xs:"0.2vh", sm:'0.2vh', md:"0.2vh", lg:'0.5vh', xl:'0.2vh'} }}>
+        <Box sx={{ textAlign: 'center', marginBottom: 'rem',paddingLeft:{xs:"0.2vh", sm:'0.3vh', md:"0.3vh", lg:'1vh', xl:'2vh'} }}>
               
           <Typography  sx={{ color: '#C5C5C5' , fontFamily: 'IBM Plex Sans Arabic', fontSize: { xs: '1.5vh', sm: '1.7vh', md: '2vh', lg: '2.2vh', xl: '2.5vh' }, fontWeight: '300'   }}>
             Please drop us an email at
