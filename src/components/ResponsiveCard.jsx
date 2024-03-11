@@ -97,13 +97,13 @@ const handleBack = () => {
             <Grid item xs={12} sm={6} md={4} lg={4} xl={6} order={isMediumScreen2 ? 2 : 1}>
               <Box sx={{ paddingX: isSmallScreen ? "4%" : "8%" }}>
                 <Box sx={{}}>
-                  <Typography sx={{ fontWeight: "bold", fontSize: { xs: "3.5vh", }, color: "#F5F5F5" }}>
+                  <Typography sx={{ fontWeight: "bold", fontSize: { xs: "1.3vh",md:"1.6vh",lg:"1.7vh" }, color: "#F5F5F5" }}>
                     Our Solutions & Service Offering
                   </Typography>
-                  <Typography sx={{ fontSize: "3.5vh", color: "#F5F5F5" }}>
+                  <Typography sx={{ fontSize: {xs: "1.3vh",md:"1.6vh",lg:"1.9vh"}, color: "#F5F5F5" }}>
                     End-to-End Solutions for You
                   </Typography>
-                  <Box sx={{ borderBottom: "0.5vh solid #553EFF", width: { xs: "22vh", md: "21vh" } }}></Box>
+                  <Box sx={{ borderBottom: "0.5vh solid #553EFF", width: { xs: "22vh", md: "21vh",lg:"15vh" } }}></Box>
                   <Typography sx={{ color: "#F5F5F5",paddingTop:"5%", fontSize: { xs: "3vh", md: "3vh.", lg: "4.5" },paddingBottom:{lg:"5vh"} }}>
                       IT Services
                     </Typography>
@@ -193,6 +193,7 @@ const handleBack = () => {
                     <SwiperSlide key={index} >
                       <Card
                         sx={{
+                        elevation: "",
                           maxWidth: "100%",
                           mt: 2,
                           // font:"50px",
@@ -217,7 +218,7 @@ const handleBack = () => {
             xs: "3.5vh",
             sm: "3vh", // Adjust for small screens
             md: "3vh", // Adjust for medium screens
-            lg: "2.5vh", // Adjust for large screens
+            lg: "3.5vh", // Adjust for large screens
         },
         color: activeStep === index ? '#FFFF' : '#ffff',
         paddingBottom: "vh",
@@ -232,7 +233,7 @@ const handleBack = () => {
             xs: "3vh",
             sm: "2.5vh", // Adjust for small screens
             md: "2vh", // Adjust for medium screens
-            lg: "1.5vh", // Adjust for large screens
+            lg: "2.5vh", // Adjust for large screens
         },
         color: activeStep === index ? '#FFFF' : '#ffff',
         paddingBottom: "vh",
@@ -247,7 +248,7 @@ const handleBack = () => {
             xs: "2.2vh",
             sm: "1.5vh", // Adjust for small screens
             md: "2vh", // Adjust for medium screens
-            lg: "1.5vh", // Adjust for large screens
+            lg: "2vh", // Adjust for large screens
         },
     }}>
         {image.description}
@@ -256,7 +257,7 @@ const handleBack = () => {
         display: "flex",
         flexDirection: "",
         color: activeStep === index ? '#FFFF' : ' #553EFF',
-        fontSize: {xs:"1.5vh",sm:"",md:"1vh",lg:"1.5vh"},
+        fontSize: {xs:"3vh",sm:"",md:"2.5vh",lg:"2vh"},
         paddingBottom: "10%",
         paddingTop: "5%"
     }}>
