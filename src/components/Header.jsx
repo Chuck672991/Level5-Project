@@ -18,13 +18,13 @@ export default function Header() {
           <Grid container spacing={2}>
             {/* Left Grid Item */}
             <Grid item xs={4} md={3} lg={6} xl={6}>
-              <Box sx={{ paddingLeft: {xs:'0.5vh',sm:"0.5vh",md:"0.8vh"},  width: { xs: "100%", md: "100%" }, padding:{xs:"25%",sm:"15%",md:"30%",lg:"7%",xl:"6.5%"}, paddingTop:{sm:"9vh", lg:"13vh", xl:"15vh"} }}>
-                <Typography sx={{ fontFamily: "IBM Plex Sans Arabic", color: "#F5F5F5", fontSize: { xs: "1.2vh", sm:"1vh", md: "2.5vh", lg:"1vh" ,xl:"1vh"} }}>
+              <Box sx={{ paddingLeft: {xs:'0.5vh',sm:"0.5vh",md:".8vh",lg:"10vh"},  width: { xs: "100%", md: "100%" }, padding:{xs:"25%",sm:"15%",md:"30%",lg:"18%",xl:"6.5%"}, paddingTop:{sm:"9vh", lg:"13vh", xl:"15vh"} }}>
+                <Typography sx={{ fontFamily: "IBM Plex Sans Arabic", color: "#F5F5F5", fontSize: { xs: "1.2vh", sm:"1vh", md: "2.5vh", lg:"2vh" ,xl:"2vh"} }}>
                   IT Systems Company
                 </Typography>
                 <Typography sx={{
                   fontFamily: "IBM Plex Sans Arabic",
-                  fontSize: { xs: "1.3vh", sm:"1.8vh",md: "2.5vh",lg:"3vh" ,xl:"3.5vh"},
+                  fontSize: { xs: "1.3vh", sm:"1.8vh",md: "2.5vh",lg:"5vh" ,xl:"5.5vh"},
                   fontWeight: 600,
                   lineHeight: "",
                   letterSpacing: "0.1em",
@@ -39,7 +39,7 @@ export default function Header() {
                   my:"5%",
                   fontFamily: "IBM Plex Sans Arabic",
                   width: {xs: "60vw", sm:"60vw", md:"60vw", lg: "50vw"},
-                  fontSize: { xs: "1.2vh", sm:"1.5vh", md:"2vh", lg:"2.2vh", xl:"2.5vh" },
+                  fontSize: { xs: "1.2vh", sm:"1.5vh", md:"2vh", lg:"4.5vh", xl:"2.5vh" },
                   fontWeight: 200,
                   lineHeight: "",
                   letterSpacing: "0.05em",
