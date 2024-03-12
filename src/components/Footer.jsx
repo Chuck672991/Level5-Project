@@ -6,7 +6,7 @@ export default function Footer() {
   const inSmallScreen = useMediaQuery("(max-width:750px)"); 
   const inMediumScreen = useMediaQuery("(max-width:900px)");
   const inLargeScreen = useMediaQuery("(max-width:1199px)");
-  const inLmScreen = useMediaQuery ("(max-width:1500px)");
+  const inLmScreen = useMediaQuery ("(max-width:1535px)");
   const inExtraLargeScreen = useMediaQuery("(max-width:2700px)");
   const [loading, setLoading] = useState(true);
 
@@ -29,7 +29,7 @@ export default function Footer() {
   return (
     <Box borderTop= '0.5px solid #FFFFFFB2' >
 
-    <Grid container spacing={2} sx={{ paddingTop: '5vh'  }}>
+    <Grid container spacing={2} sx={{ padding: '4vh'  }}>
       <Grid item xs={12} sm={4} md={4} lg={3}>
       <Box
   display="flex"
@@ -39,9 +39,11 @@ export default function Footer() {
     src="./thumbnail_Master_logo_white 2.svg"
     alt=""
     style={{
+      // backgroundColor:'red',
+      paddingBottom:'1%',
       paddingLeft:inExtraSmallScreen?"30%": inSmallScreen?"15%":'15%',
-      height: { xs: '3vh', sm: '8vh', md: "10vh", lg:"14vh", xl:"19vh" }, // Adjust based on screen size
-      width: '37%', // Ensure image doesn't exceed container width
+      height: { xs: '2vh', sm: '8vh', md: "10vh", lg:"14vh", xl:"19vh" }, // Adjust based on screen size
+      width: '38%', // Ensure image doesn't exceed container width
       
       // width: 'auto', // Maintain aspect ratio
       // height: 'auto', // Maintain aspect ratio
@@ -49,9 +51,9 @@ export default function Footer() {
   />
 </Box>
       </Grid>
-      <Grid item xs={12} sm={4} md={4} lg={4} xl={6}>
-        <Box display="flex"  justifyContent={'space-evenly'} width={'26%'} marginInline={'38%'} >
-          <Typography variant="body1" style={{ color: "#FFFFFFB2",  paddingRight: inExtraSmallScreen? "8%": inSmallScreen? "5%": inMediumScreen?"8%": inLargeScreen?"8%": inLmScreen?"10%": inExtraLargeScreen?"5%":"", fontSize:inExtraSmallScreen?"55%":inSmallScreen?"50%":inMediumScreen?"10px":inLargeScreen?"12px": inLmScreen?"13px":inExtraLargeScreen?"100%":"", fontWeight:'400' }}>
+      <Grid item xs={12} sm={4} md={4} lg={4} xl={6} >
+        <Box display="flex" justifyContent={'space-evenly'} width={'26%'} marginInline={'38%'} paddingTop={'1vh'} sx={{paddingLeft:{lg:"20%", xl:"0%"}}}>
+          <Typography variant="body1" style={{ color: "#FFFFFFB2", paddingRight: inExtraSmallScreen? "8%": inSmallScreen? "5%": inMediumScreen?"8%": inLargeScreen?"8%": inLmScreen?"10%": inExtraLargeScreen?"5%":"", fontSize:inExtraSmallScreen?"55%":inSmallScreen?"50%":inMediumScreen?"10px":inLargeScreen?"12px": inLmScreen?"13px":inExtraLargeScreen?"100%":"", fontWeight:'400' }}>
             <Link href="/support" color="inherit" underline="none">Support</Link>
           </Typography>
           <Typography variant="body1" style={{ color: "#FFFFFFB2",  paddingRight: inSmallScreen? "8%":inMediumScreen?"8%": inLargeScreen?"8%": inLmScreen?"8%": inExtraLargeScreen?"5%":"", fontSize:inExtraSmallScreen?"55%":inSmallScreen?"50%":inMediumScreen?"10px":inLargeScreen?"12px": inLmScreen?"13px":inExtraLargeScreen?"100%":"",  whiteSpace:'nowrap' , fontWeight:'400'}}>
@@ -63,8 +65,8 @@ export default function Footer() {
         </Box>
       </Grid>
       <Grid item xs={12} sm={4} md={4} lg={3} xl={3}>
-        <Box display={'flex'} justifyContent={'space-around'}  >
-          <Typography    sx={{ color: "#FFFFFFB2", fontWeight: '400', fontSize:inExtraSmallScreen?"55%":inSmallScreen?"50%":inMediumScreen?"10px":inLargeScreen?"12px": inLmScreen?"13px":inExtraLargeScreen?"100%":"", whiteSpace: 'nowrap',paddingLeft: inSmallScreen?"": inMediumScreen?"16%": inExtraSmallScreen?"%": inLargeScreen? "15%": inLmScreen?"130%":inExtraLargeScreen?"15%":"" }}>
+        <Box display={'flex'} justifyContent={'space-around'} paddingTop={'1vh'}  >
+          <Typography    sx={{ color: "#FFFFFFB2", fontWeight: '400', fontSize:inExtraSmallScreen?"55%":inSmallScreen?"50%":inMediumScreen?"10px":inLargeScreen?"12px": inLmScreen?"13px":inExtraLargeScreen?"17px":"", whiteSpace: 'nowrap',paddingLeft: inSmallScreen?"": inMediumScreen?"16%": inExtraSmallScreen?"%": inLargeScreen? "15%": inLmScreen?"130%":inExtraLargeScreen?"15%":"" }}>
           © 2024 LevelFive, All Rights Reserved </Typography>
         </Box>
       </Grid>

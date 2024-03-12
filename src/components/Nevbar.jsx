@@ -67,6 +67,7 @@ export default function Navbar() {
           <div style={{ backgroundColor: "transparent" }}>
             <Box
               sx={{
+                fontFamily:'IBM Plex Sans Arabic',
                 paddingRight: { xs: "0.2%", sm: "12%", md: "13%", lg: "", xl: "" },
                 fontSize: { xs: "50%", sm: "85%", md:"90%", lg:"100%", xl:"150%" },
                 width: { xs: "75%", sm: "68%", md:"70%", },
