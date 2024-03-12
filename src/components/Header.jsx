@@ -15,7 +15,7 @@ export default function Header() {
           <Grid container spacing={2}>
             {/* Left Grid Item */}
             <Grid item xs={4} md={3} lg={6} xl={6}>
-              <Box sx={{ paddingLeft: {xs:'16vh',sm:"20vh",md:"30vh"},  width: { xs: "100%", md: "100%" }, padding:{xs:"25%",sm:"15%",md:"30%",lg:"7%",xl:"6.5%"}, paddingTop:{sm:"9vh", lg:"13vh", xl:"15vh"} }}>
+              <Box sx={{ paddingLeft: {xs:'20vh',sm:"20vh",md:"30vh"},  width: { xs: "100%", md: "100%" }, padding:{xs:"15%",sm:"15%",md:"30%",lg:"7%",xl:"6.5%"}, paddingTop:{sm:"9vh", lg:"13vh", xl:"15vh"} }}>
                 <Typography sx={{ fontFamily: "IBM Plex Sans Arabic", color: "#F5F5F5", fontSize: { xs: "1.2vh", sm:"3vh", md: "2.5vh", lg:"3vh" } }}>
                   IT Systems Company
                 </Typography>
@@ -35,14 +35,14 @@ export default function Header() {
                 <Typography sx={{
                   my:"5%",
                   fontFamily: "IBM Plex Sans Arabic",
-                  width: {xs: "60vw", sm:"60vw", md:"60vw", lg: "50vw"},
-                  fontSize: { xs: "2.8vh", sm:"4vh", md:"4.5vh", lg:"5vh", xl:"6vh" },
-                  fontWeight: 200,
+                  // width: {xs: "90vw", sm:"60vw", md:"60vw", lg: "50vw"},
+                  fontSize: { xs: "9px  ", sm:"26px", md:"4.5vh", lg:"5vh", xl:"6vh" },
+                  fontWeight: 300,
                   lineHeight: "",
                   letterSpacing: "0.05em",
                   textAlign: "left",
                   color: "#C5C5C5",
-                // maxWidth:"90%"
+                // maxWidth:"90%"  
                 }}>
                   Where technology is finely curated & elegantly tailored for every client’s journey
                 </Typography>
@@ -52,8 +52,8 @@ export default function Header() {
               </Box> */}
             </Grid>
             {/* Right Grid Item */}
-            <Grid item xs={8} md={8} lg={6} xl={6} >
-              <Box sx={{ paddingLeft: {xs:'18%',sm:"16%",md:"28%",lg:"15%",xl:"15%"},paddingTop: { xs: "2vh", md: "4vh" },paddingBottom:{xs:'5vh',md:"30vh"},opacity:{xs:"23%",sm:"23%",md:"50%" , lg:"50%",xl:"50%"}, width: { xs: "80%",sm:"80%",md: "80%",lg:"80%" } }}>
+            <Grid item xs={6} md={8} lg={6} xl={6} >
+              <Box sx={{ paddingLeft: {xs:'18%',sm:"16%",md:"28%",lg:"15%",xl:"15%"},paddingTop: { xs: "2vh", md: "4vh" },paddingBottom:{xs:'5vh',md:"30vh"},opacity:{xs:"23%",sm:"23%",md:"50%" , lg:"50%",xl:"50%"}, width: { xs: "100%",sm:"80%",md: "80%",lg:"80%" } }}>
                 <Design />
               </Box>
             </Grid>
