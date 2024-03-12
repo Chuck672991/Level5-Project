@@ -171,7 +171,7 @@ const handleBack = () => {
             <Grid item xs={12} sm={6 } md={8} lg={8} xl={6} order={isMediumScreen2 ? 2 : 1}>
              
               <Paper elevation={3} sx={{ p: 3, textAlign: 'start', backgroundColor: "#1B1B1F" ,border:"none" }}>
-              <Box sx={{ position: "relative", paddingLeft:{xs:"35%" ,sm:"%", md:"40%" ,lg:"40%" ,xl:"90%" } }}>
+              <Box sx={{ position: "relative", paddingLeft:{xs:"35%" ,sm:"%", md:"40%" ,lg:"40%" ,xl:"40%" } }}>
             <Button size="large" onClick={handleBack} >
               <KeyboardArrowLeft  />
             </Button>

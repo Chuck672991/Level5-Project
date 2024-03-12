@@ -24,7 +24,7 @@ export default function Story() {
           <Grid item xs={12} sm={6} md={6} lg={5} xl={6} >
             <Box sx={{   }}>
 
-              <Box sx={{ paddingLeft: { xs: "2vh", md: "3vh", xl:"2vh" }, paddingTop: { xs: "8vh", md: "20vh", xl:"10vh" }, textAlign: "" }}>
+              <Box sx={{ paddingLeft: { xs: "2vh", md: "3vh", lg:"2vh",xl:"3vh" }, paddingTop: { xs: "8vh", md: "20vh", lg:"20vh",xl:"30vh" }, textAlign: "" }}>
                 <Typography
                   sx={{
                     color: "#F5F5F5",
@@ -36,7 +36,7 @@ export default function Story() {
                       sm: "8px", // for small screens
                       md: "13px", // for medium screens
                       lg: "10px", // for large screens
-                      xl: "30px"  // for extra-large screens
+                      xl: "18px"  // for extra-large screens
                     },
                     // Add other styles as needed
                   }}
@@ -46,7 +46,7 @@ export default function Story() {
                 <Typography
                   sx={{
                     fontFamily: "IBM Plex Sans Arabic",
-                    fontSize: { xs: "2vh",sm:"1.6vh" ,md: "2.3vh",lg:"4vh",xl:"3.5vh" },
+                    fontSize: { xs: "2vh",sm:"1.6vh" ,md: "2.3vh",lg:"2.8vh",xl:"3.5vh" },
                     fontWeight: "600",
                     lineHeight: {xs:"vh "},
                     letterSpacing: "0em",
@@ -58,9 +58,9 @@ export default function Story() {
                   The Story Behind our Name <br />
                   <span style={{ color: "#C5C5C5", fontWeight: 300 }}>level Five</span>
                 </Typography>
-                <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "2%", maxWidth: { xs: "2.5vw", sm: "3vw", md: "15vw", lg: "4vw" }, }} />
+                <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "2%", maxWidth: { xs: "20vw", sm: "12vw", md: "15vw", lg: "12vw" }, }} />
               </Box>
-              <Box sx={{ fontFamily:"IBM Plex Sans Arabic",color:"#C5C5C5", paddingLeft: { xs: "2vh", md: "3vh",lg:"20vh",xl:"3vh" } }}>
+              <Box sx={{ fontFamily:"IBM Plex Sans Arabic",color:"#C5C5C5", paddingLeft: { xs: "2vh", md: "3vh",lg:"3vh",xl:"3vh" } }}>
                 <Typography sx={{ color: "#C5C5C5",fontSize: {xs:"14px",sm:"16px",md:"1.5vh",lg:"2vh",xl:"1.5vh"},paddingBottom:"10%" }}>
                   Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique, where each level represents a curated space of expertise. Just as one explores unique offering in a boutique, Level Five aspires to deliver specialized and tailored IT solutions at the highest level of proficiency.
 

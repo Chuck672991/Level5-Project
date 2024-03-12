@@ -14,7 +14,6 @@ export default function Itsolution() {
       <Container>
     <div style={{ backgroundColor: "#000" }}>
 <br />
-<br />
 
 
         <Grid container spacing={2} sx={{ paddingLeft: isMobileScreen ? "2vh" : "5vh" }}>
@@ -48,7 +47,7 @@ export default function Itsolution() {
                 Tailored IT Solutions in Riyadh <br />
                 <span style={{ color: "#F5F5F5", fontFamily: "IBM Plex Sans Arabic", fontWeight: "300" }}> Approach to Cost-Effectiveness</span>
               </Typography>
-              <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "2%", maxWidth: { xs: "34vw", md: "12vw" } }} />
+              <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "2%", maxWidth: { xs: "34vw",sm:"10vh" ,md: "30vw",lg:"35vh" } }} />
               <Box sx={{
                 paddingTop: { xs: "2vh", sm: "3vh", md: "15vh",lg:"8vh" },
                 paddingLeft: { xs: "0vh", sm: "vh", md: "0vh" },

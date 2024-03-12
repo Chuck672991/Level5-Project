@@ -75,8 +75,6 @@ export default function Navbar() {
       style={{
         // paddingRight: "vh",
         overflow:'hidden',
-        background:
-          "linear-gradient(241deg, rgba(0,0,0,1) 10%, rgba(7,4,66,0.9051995798319328) 100%)",
       }}
     >
       <AppBar position="static"
