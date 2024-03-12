@@ -39,7 +39,7 @@ export default function Header() {
                   my:"5%",
                   fontFamily: "IBM Plex Sans Arabic",
                   width: {xs: "60vw", sm:"60vw", md:"60vw", lg: "50vw"},
-                  fontSize: { xs: "2vh", sm:"1.5vh", md:"2vh", lg:"4.5vh", xl:"2.5vh" },
+                  fontSize: { xs: "1.5vh", sm:"2.5vh", md:"3.5vh", lg:"4.5vh", xl:"4.5vh" },
                   fontWeight: 200,
                   lineHeight: "",
                   letterSpacing: "0.05em",
@@ -63,7 +63,7 @@ export default function Header() {
             {/* Bottom Grid Item */}
             <Grid item xs={12}>
                 
-          <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="level five logo " style={{ paddingBottom:"10%" ,paddingLeft: isSmallScreen ? "4vh" : "4.5vh", width: isSmallScreen ? "10vh" : "15vh" }} />
+          <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="level five logo " style={{ paddingBottom:"10%" ,paddingLeft: isSmallScreen ? "4vh" : "10vh", width: isSmallScreen ? "10vh" : "30vh" }} />
 
             
           </Grid>
