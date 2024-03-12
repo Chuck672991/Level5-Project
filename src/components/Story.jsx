@@ -17,14 +17,14 @@ export default function Story() {
         {/* <Grid item xs={12} md={6}></Grid> */}
         <Grid container spacing={2} >
           <Grid item xs={12} sm={6}  md={6} lg={5} xl={6} >
-            <Box sx={{opacity:{xs:"30%",sm:"40%",md:"50%",lg:"50%",xl:"50%"}, paddingLeft: { xs: "4vh", md: "6vh", lg:"10vh",xl:"10vh" } ,height: { xs: "10vh", md: "vh" },paddingButton:{xs:"10%"} }}>
+            <Box sx={{opacity:{xs:"30%",sm:"40%",md:"50%",lg:"50%",xl:"50%"}, paddingLeft: { xs: "vh", md: "5vh", lg:"5vh",xl:"5vh" },paddingTop:{xl:"15vh"},width:{xs:"3  0vh"} ,height: { xs: "10vh", md: "vh"},paddingButton:{xs:"10%"} }}>
               <Design2 />
             </Box>
           </Grid>
           <Grid item xs={12} sm={6} md={6} lg={5} xl={6} >
-            <Box  >
+            <Box sx={{   }}>
 
-              <Box sx={{ paddingLeft: { xs: "2vh", md: "3vh",lg:"10vh",xl:"3vh" }, paddingTop: { xs: "20vh",sm:"35vh" ,md: "30vh",lg:"20vh" }, textAlign: "" }}>
+              <Box sx={{ paddingLeft: { xs: "2vh", md: "20vh", xl:"2vh" }, paddingTop: { xs: "8vh", md: "10vh", xl:"10vh" }, textAlign: "" }}>
                 <Typography
                   sx={{
                     color: "#F5F5F5",
@@ -34,9 +34,9 @@ export default function Story() {
                     fontSize: {
                       xs: "8px", // for extra-small screens
                       sm: "8px", // for small screens
-                      md: "12px", // for medium screens
-                      lg: "12px", // for large screens
-                      xl: "20px"  // for extra-large screens
+                      md: "13px", // for medium screens
+                      lg: "10px", // for large screens
+                      xl: "30px"  // for extra-large screens
                     },
                     // Add other styles as needed
                   }}

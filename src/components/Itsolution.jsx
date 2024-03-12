@@ -36,12 +36,13 @@ export default function Itsolution() {
                   fontFamily: "IBM Plex Sans Arabic",
                   fontSize:{xs:"25px", sm:"19px",md:"23px",lg:"25px",xl:"30px"},
                   // fontSize: isMobileScreen ? "3vh" : isMediumScreen ? "2.5vh" : "4vh",
+                  // width:{xs:"30vh",sm:"50vh",md:"60vh",lg:"60vh"},
                   fontWeight: "600",
-                  lineHeight: "4vh",
+                  lineHeight: "5vh",
                   letterSpacing: "0em",
                   textAlign: "left",
                   color: "#F5F5F5",
-                  // gap: "vh"
+                  //  gap: "vh"
                 }}
               >
                 Tailored IT Solutions in Riyadh <br />

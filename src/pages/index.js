@@ -16,7 +16,7 @@ const Home = () => {
 <Header/>
         <Itsolution/>
         <Story/>
-     <ResponsiveCard/>
+        <ResponsiveCard/>
         <Connect/>
 
         </Layout>
