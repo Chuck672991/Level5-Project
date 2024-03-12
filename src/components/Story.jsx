@@ -24,7 +24,7 @@ export default function Story() {
           <Grid item xs={12} sm={6} md={6} lg={5} xl={6} >
             <Box sx={{   }}>
 
-              <Box sx={{ paddingLeft: { xs: "2vh", md: "20vh", xl:"2vh" }, paddingTop: { xs: "8vh", md: "10vh", xl:"10vh" }, textAlign: "" }}>
+              <Box sx={{ paddingLeft: { xs: "2vh", md: "3vh", xl:"2vh" }, paddingTop: { xs: "8vh", md: "20vh", xl:"10vh" }, textAlign: "" }}>
                 <Typography
                   sx={{
                     color: "#F5F5F5",
@@ -58,7 +58,7 @@ export default function Story() {
                   The Story Behind our Name <br />
                   <span style={{ color: "#C5C5C5", fontWeight: 300 }}>level Five</span>
                 </Typography>
-                <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "2%", maxWidth: { xs: "2.5vw", sm: "3vw", md: "3vw", lg: "4vw" }, }} />
+                <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "2%", maxWidth: { xs: "2.5vw", sm: "3vw", md: "15vw", lg: "4vw" }, }} />
               </Box>
               <Box sx={{ fontFamily:"IBM Plex Sans Arabic",color:"#C5C5C5", paddingLeft: { xs: "2vh", md: "3vh",lg:"20vh",xl:"3vh" } }}>
                 <Typography sx={{ color: "#C5C5C5",fontSize: {xs:"14px",sm:"16px",md:"1.5vh",lg:"2vh",xl:"1.5vh"},paddingBottom:"10%" }}>
