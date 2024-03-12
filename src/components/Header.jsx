@@ -45,7 +45,7 @@ export default function Header() {
                   letterSpacing: "0.05em",
                   textAlign: "left",
                   color: "#C5C5C5",
-                // maxWidth:"90%"
+                // maxWidth:"90%"  
                 }}>
                   Where technology is finely curated & elegantly tailored for every client’s journey
                 </Typography>
@@ -55,8 +55,8 @@ export default function Header() {
               </Box> */}
             </Grid>
             {/* Right Grid Item */}
-            <Grid item xs={8} md={8} lg={6} xl={6} >
-              <Box sx={{ paddingLeft: {xs:'18%',sm:"16%",md:"28%",lg:"15%",xl:"15%"},paddingTop: { xs: "2vh", md: "4vh" },paddingBottom:{xs:'5vh',md:"30vh"},opacity:{xs:"23%",sm:"23%",md:"50%" , lg:"50%",xl:"50%"}, width: { xs: "80%",sm:"80%",md: "80%",lg:"80%" } }}>
+            <Grid item xs={6} md={8} lg={6} xl={6} >
+              <Box sx={{ paddingLeft: {xs:'18%',sm:"16%",md:"28%",lg:"15%",xl:"15%"},paddingTop: { xs: "2vh", md: "4vh" },paddingBottom:{xs:'5vh',md:"30vh"},opacity:{xs:"23%",sm:"23%",md:"50%" , lg:"50%",xl:"50%"}, width: { xs: "100%",sm:"80%",md: "80%",lg:"80%" } }}>
                 <Design />
               </Box>
             </Grid>

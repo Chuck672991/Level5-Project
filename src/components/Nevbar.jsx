@@ -6,11 +6,6 @@ import {
   IconButton,
   Menu,
   MenuItem,
-  useMediaQuery,
-  Divider,
-  ListItem,ListItemButton,ListItemText,
-  List,
-  Hidden,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Box } from "@mui/system";
@@ -31,18 +26,6 @@ export default function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [hover, setHover] = useState(false);
   const [loading, setLoading] = useState(true);
-  const mobileS = useMediaQuery('(min-width:600px)');
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  function DrawerAppBar(props) {
-    const { window } = props;
-    const [mobileOpen, setMobileOpen] = React.useState(false);
-  
-    const handleDrawerToggle = () => {
-      setMobileOpen((prevState) => !prevState);
-    };
-  
-  }
-
 
   useEffect(() => {
     // Simulate loading delay
@@ -66,10 +49,6 @@ export default function Navbar() {
     return null; // Render nothing until loading is complete
   }
 
-  const drawerWidth = 240;
-  const navItems = ['Home', 'About', 'Contact'];
-  
-  
   return (
     <div
       style={{
@@ -84,9 +63,8 @@ export default function Navbar() {
         <Toolbar
           sx={{backgroundColor: "inherit",boxSizing:"border-box" }}
         >
-{
-  
-          <div style={{ backgroundColor: "inherit" }}>
+
+          <div style={{ backgroundColor: "transparent" }}>
             <Box
               sx={{
                 paddingRight: { xs: "0.2%", sm: "12%", md: "13%", lg: "", xl: "" },
@@ -121,14 +99,10 @@ export default function Navbar() {
             <MenuIcon
               sx={{ position: "absolute", right: "10px", top: "30px", width:{xs:"3%", sm:"6.5%", md: "9%", lg:"7%", xl:"7.5%"}, height:{xs:"35%", sm:"40%", md:"43%", lg:"50%", xl:"65%"} }}
               onMouseEnter={() => setHover(!hover)}
-              
             />
-      
           </div>
-}
-{/* {mobileS &&
 
-          <div> 
+          <div>
             <Menu
               id="menu"
               anchorEl={anchorEl}
@@ -150,8 +124,6 @@ export default function Navbar() {
               ))}
             </Menu>
           </div>
-} */}
-
         </Toolbar>
       </AppBar>
     </div>
