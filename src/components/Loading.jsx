@@ -34,7 +34,7 @@ background: 'linear-gradient(120deg, rgba(10,4,57,1) 3%, rgba(0,0,0,1) 50%, rgba
             height={is600 ? 50 : 100.52} 
             src={FilledLandingLogo}
             alt="Logo"
-            style={{ marginLeft: "11vw" }}
+            style={{ marginLeft: "vw" }}
             className={styles.logoContainer}
           />
           <Image
