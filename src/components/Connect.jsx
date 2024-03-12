@@ -31,18 +31,19 @@ export default function Connect() {
       >
         <Box sx={{ textAlign: 'center', marginBottom: 'rem',paddingLeft:{xs:"0.2vh", sm:'0.3vh', md:"0.3vh", lg:'1vh', xl:'2vh'} }}>
               
-          <Typography  sx={{ color: '#FFFFFFB2' , fontFamily: 'IBM Plex Sans Arabic', fontSize: { xs: '1.5vh', sm: '1.7vh', md: '2vh', lg: '2.2vh', xl: '2.5vh' }                                                                                             }}>
+          <Typography  sx={{ color: '#C5C5C5' , fontFamily: 'IBM Plex Sans Arabic', fontSize: { xs: '1.5vh', sm: '1.7vh', md: '2vh', lg: '2.2vh', xl: '2.5vh' }, fontWeight: '300'   }}>
             Please drop us an email at
           </Typography>
           <Typography
             variant="h4"
             sx={{
               fontFamily: 'IBM Plex Sans Arabic',
-              color: '#FFFFFFB2',
+              fontWeight:'600',
+              color: '#C5C5C5',
               fontSize: { xs: '3vh', sm: '4vh', md: '5vh', lg: '6vh', xl: '7vh' }, // Adjust font size based on breakpoints
             }}
           >
-          connect<span style={{ color: '#553EFF', fontFamily: 'IBM Plex Sans Arabic', fontWeight:'bold' }}>@Level5.com</span>.sa
+          connect<span style={{ color: '#553EFF', fontFamily: 'IBM Plex Sans Arabic', fontWeight: 'bold', fontWeight: '600' }}>@Level5.com</span>.sa
           </Typography>
         </Box>
       </Box>
