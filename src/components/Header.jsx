@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <>
         <Container>
-        <div style={{  background: 'rgb(28,23,60)', background: 'linear-gradient(-140deg, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 61%, rgba(7,4,66,0.9051995798319328)',width:"100%" } }>
+        <div style={{  width:"100%" } }>
 
           <Grid container spacing={2}>
             {/* Left Grid Item */}
@@ -21,7 +21,7 @@ export default function Header() {
                 </Typography>
                 <Typography sx={{
                   fontFamily: "IBM Plex Sans Arabic",
-                  fontSize: { xs: "2.3vh", sm:"6vh",md: "6vh",lg:"6vh" ,xl:"7vh"},
+                  fontSize: { xs: "2.3vh", sm:"3vh",md: "6vh",lg:"6vh" ,xl:"7vh"},
                   fontWeight: 600,
                   lineHeight: "",
                   letterSpacing: "0.1em",
