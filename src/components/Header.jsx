@@ -24,7 +24,7 @@ export default function Header() {
                 </Typography>
                 <Typography sx={{
                   fontFamily: "IBM Plex Sans Arabic",
-                  fontSize: { xs: "1.3vh", sm:"1.8vh",md: "2.5vh",lg:"5vh" ,xl:"5.5vh"},
+                  fontSize: { xs: "2.5vh", sm:"1.8vh",md: "2.5vh",lg:"5vh" ,xl:"5.5vh"},
                   fontWeight: 600,
                   lineHeight: "",
                   letterSpacing: "0.1em",
@@ -39,7 +39,7 @@ export default function Header() {
                   my:"5%",
                   fontFamily: "IBM Plex Sans Arabic",
                   width: {xs: "60vw", sm:"60vw", md:"60vw", lg: "50vw"},
-                  fontSize: { xs: "1.2vh", sm:"1.5vh", md:"2vh", lg:"4.5vh", xl:"2.5vh" },
+                  fontSize: { xs: "2vh", sm:"1.5vh", md:"2vh", lg:"4.5vh", xl:"2.5vh" },
                   fontWeight: 200,
                   lineHeight: "",
                   letterSpacing: "0.05em",
