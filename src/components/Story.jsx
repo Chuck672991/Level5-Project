@@ -46,7 +46,7 @@ export default function Story() {
                 <Typography
                   sx={{
                     fontFamily: "IBM Plex Sans Arabic",
-                    fontSize: { xs: "2vh",sm:"1.6vh" ,md: "2.3vh",lg:"2.8vh",xl:"3.5vh" },
+                    fontSize:{xs:"20px", sm:"19px",md:"23px",lg:"25px",xl:"30px"},
                     fontWeight: "600",
                     lineHeight: {xs:"vh "},
                     letterSpacing: "0em",
