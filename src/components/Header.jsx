@@ -53,6 +53,23 @@ export default function Header() {
               {/* <Box  >
                 <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="level five logo " style={{ paddingTop:isLgScreen?"18%":"20%",   width:isSmallScreen?"20vw":"25vw" }} sx={{paddingLeft:{xs:"4vh", sm:"2.5vh" , md:"15vh",lg:"26vh",xl:"28vh"}}} />
               </Box> */}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+            <Grid item xs={12}>
+                
+                <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="level five logo " style={{ paddingBottom:"" ,paddingLeft: isSmallScreen ? "4vh" : "8vh", width: isSmallScreen ? "10vh" : "40vh" }} />
+      
+                  
+                </Grid>
+      
             </Grid>
             {/* Right Grid Item */}
             <Grid item xs={6} md={8} lg={6} xl={6} >
@@ -61,12 +78,6 @@ export default function Header() {
               </Box>
             </Grid>
             {/* Bottom Grid Item */}
-            <Grid item xs={12}>
-                
-          <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="level five logo " style={{ paddingBottom:"10%" ,paddingLeft: isSmallScreen ? "4vh" : "10vh", width: isSmallScreen ? "10vh" : "30vh" }} />
-
-            
-          </Grid>
           </Grid>
           </div>
 
