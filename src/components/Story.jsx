@@ -61,7 +61,7 @@ export default function Story() {
                 <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "2%", maxWidth: { xs: "20vw", sm: "12vw", md: "10vw", lg: "8vw" }, }} />
               </Box>
               <Box sx={{ fontFamily:"IBM Plex Sans Arabic",color:"#C5C5C5", padding: { xs: "2vh", md: "3vh",lg:"0vh",xl:"3vh" } }}>
-                <Typography sx={{ color: "#C5C5C5",fontSize: {xs:"0.8",sm:"1vh",md:"2vh",lg:"2.5vhpx"},paddingBottom:"10%" }}>
+                <Typography sx={{ color: "#C5C5C5",fontSize: {xs:"0.8",sm:"2vh",md:"3vh",lg:"2.5vhpx"},paddingBottom:"10%" }}>
                   Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique, where each level represents a curated space of expertise. Just as one explores unique offering in a boutique, Level Five aspires to deliver specialized and tailored IT solutions at the highest level of proficiency.
 
                   <br /><br />
