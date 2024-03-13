@@ -97,26 +97,27 @@ const handleBack = () => {
             <Grid item xs={12} sm={6} md={4} lg={4} xl={6} order={isMediumScreen2 ? 2 : 1}>
               <Box sx={{ paddingX: isSmallScreen ? "4%" : "8%" }}>
                 <Box sx={{}}>
-                  <Typography sx={{ fontWeight: "bold", fontSize: { xs: "1.3vh",md:"1.6vh",lg:"1.7vh" }, color: "#F5F5F5" }}>
+                  <Typography sx={{ fontWeight: "bold", fontSize:{xs:"20px", sm:"19px",md:"23px",lg:"25px",xl:"30px"}, color: "#F5F5F5" }}>
                     Our Solutions & Service Offering
                   </Typography>
-                  <Typography sx={{ fontSize: {xs: "1.3vh",md:"1.6vh",lg:"1.9vh"}, color: "#F5F5F5" }}>
+                  <Typography sx={{ fontSize:{xs:"20px", sm:"19px",md:"23px",lg:"25px",xl:"30px"}, color: "#F5F5F5" }}>
                     End-to-End Solutions for You
                   </Typography>
-                  <Box sx={{ borderBottom: "0.5vh solid #553EFF", width: { xs: "22vh", md: "21vh",lg:"15vh" } }}></Box>
-                  <Typography sx={{ color: "#F5F5F5",paddingTop:"5%", fontSize: { xs: "3vh", md: "3vh.", lg: "4.5" },paddingBottom:{lg:"5vh"} }}>
+                  <Box sx={{ borderBottom: "0.5vh solid #553EFF", width: { xs: "10vh",sm:"20vh" ,md: "40vh",lg:"50vh" } }}></Box>
+                  <Typography sx={{ color: "#F5F5F5",paddingTop:"2%", fontSize: { xs: "3vh", md: "3vh.", lg: "4.5" },paddingBottom:{lg:"3vh"} }}>
                       IT Services
                     </Typography>
                     {sections.map((section, index) => (
                       <div key={index}>
-                        <Button
+                         <Button
                           sx={{
                             color: "#C5C5C5",
                             fontFamily: "IBM Plex Sans Arabic",
-                            fontSize: isSmallScreen ? "12px" : "10px",
+                            fontSize: isSmallScreen ? "14px" : "16px",
                             fontWeight: "10",
                             lineHeight: "3",
                             width: "100%",
+                          height:"100%",
                             borderBottom: "1px solid #ffff",
                             // paddingBottom:"5%"
 
@@ -124,7 +125,7 @@ const handleBack = () => {
                           onClick={() => handleClickSection(index)}
                         >
                           {section.label} <ExpandMoreIcon sx={{ color: expandedSections[index] ? '#553EFF' : 'inherit' }} />
-                        </Button>
+                        </Button> 
                         {activeSection === index && (
                           <Box>
                             <Typography
