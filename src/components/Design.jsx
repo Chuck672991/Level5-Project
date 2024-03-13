@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 
 const ballData = [
-  {id:"ball1", cx: 104.088, cy: 361.029, r: 6.12281 },
+  // {id:"ball1", cx: 104.088, cy: 361.029, r: 6.12281 },
   {id:"ball2" ,cx:4.08187 ,  cy:14.0702  , r:4.08187  },
   {id:"ball3" ,cx:53.0643 ,  cy:14.0702  , r:4.08187  },
   {id:"ball4" ,cx:104.088 ,  cy:14.0701  , r:6.12281  },
@@ -59,7 +59,7 @@ const ballData = [
   {id:"ball95" ,cx:593.912 ,  cy:222.246 ,  r:6.12281 },
   {id:"ball96" ,cx:644.935 ,  cy:222.246 ,  r:4.08187 },
   {id:"ball97" ,cx:693.918 ,  cy:222.246 ,  r:4.08187 },
-  
+ 
   {id:"ball29" ,cx:53.0643 ,  cy:291.637  , r:4.08187  },
   {id:"ball30" ,cx:104.088 ,  cy:291.637  , r:6.12281  },
   {id:"ball31" ,cx:159.193 ,  cy:291.638  , r:8.16374  },
@@ -100,11 +100,8 @@ const ballData = [
   {id:"ball51" ,cx:593.912 ,  cy:430.421  , r:6.12281 },
   {id:"ball52" ,cx:644.935 ,  cy:430.421  , r:4.08187 },
   {id:"ball53" ,cx:693.918 ,  cy:430.421  , r:4.08187 },
-  {id:"ball54" ,cx:159.193 ,  cy:569.205  , r:8.16374 },
-  {id:"ball55" ,cx:218.38 ,  cy:569.205  , r:10.2047  },
-  {id:"ball56" ,cx:281.65 ,  cy:569.205  , r:12.2456  },
-  {id:"ball57" ,cx:348.999 ,  cy:569.205  , r:14.2866 },
-  {id:"ball58" ,cx:416.351 ,  cy:569.205  , r:12.2456 },
+
+ 
 
   {id:"ball111" ,cx:53.0643 ,  cy:499.813 ,  r:4.08187 } ,
   {id:"ball112" ,cx:104.088 ,  cy:499.813 ,  r:6.12281 } ,
@@ -119,22 +116,19 @@ const ballData = [
   {id:"ball121" ,cx:644.935 ,  cy:499.813 ,  r:4.08187 },
   {id:"ball122" ,cx:693.918 ,  cy:499.813 ,  r:4.08187 },
 
+  {id:"ball54" ,cx:159.193 ,  cy:569.205  , r:8.16374 },
+  {id:"ball55" ,cx:218.38 ,  cy:569.205  , r:10.2047  },
+  {id:"ball56" ,cx:281.65 ,  cy:569.205  , r:12.2456  },
+  {id:"ball57" ,cx:348.999 ,  cy:569.205  , r:14.2866 },
+  {id:"ball58" ,cx:416.351 ,  cy:569.205  , r:12.2456 },
   {id:"ball59" ,cx:479.621 ,  cy:569.205  , r:10.2047 },
   {id:"ball60" ,cx:538.806 ,  cy:569.205  , r:8.16374 },
   {id:"ball61" ,cx:593.912 ,  cy:569.205  , r:6.12281 },
   {id:"ball62" ,cx:644.935 ,  cy:569.205  , r:4.08187 },
   {id:"ball63" ,cx:693.918 ,  cy:569.205  , r:4.08187 },
-  {id:"ball64" ,cx:416.351 ,  cy:707.988  , r:12.2456 },
-  {id:"ball65" ,cx:479.621 ,  cy:707.988  , r:10.2047 },
-  {id:"ball66" ,cx:538.806 ,  cy:707.988  , r:8.16374 },
-  {id:"ball67" ,cx:593.912 ,  cy:707.988  , r:6.12281 },
-  {id:"ball68" ,cx:644.935 ,  cy:707.988  , r:4.08187 },
-  {id:"ball69" ,cx:693.918 ,  cy:707.988  , r:4.08187 },
-  {id:"ball70" ,cx:644.935 ,  cy:846.772  , r:4.08187 },
 
-  {id:"ball71" ,cx:693.918 ,  cy:846.772  , r:4.08187 },
-  
-  {id:"ball123" ,cx:281.65 ,  cy:638.596 ,  r:12.2456  },
+
+   {id:"ball123" ,cx:281.65 ,  cy:638.596 ,  r:12.2456  },
   {id:"ball124" ,cx:348.999,  cy:638.597 ,  r:14.2866 },
   {id:"ball125" ,cx:416.351,  cy:638.596 ,  r:12.2456 },
   {id:"ball126" ,cx:479.621,  cy:638.596 ,  r:10.2047 },
@@ -142,6 +136,20 @@ const ballData = [
   {id:"ball128" ,cx:593.912 ,  cy:638.596 ,  r:6.12281},
   {id:"ball129" ,cx:644.935 ,  cy:638.596 ,  r:4.08187},
   {id:"ball130" ,cx:693.918 ,  cy:638.596 ,  r:4.08187},
+
+  {id:"ball64" ,cx:416.351 ,  cy:707.988  , r:12.2456 },
+  {id:"ball65" ,cx:479.621 ,  cy:707.988  , r:10.2047 },
+  {id:"ball66" ,cx:538.806 ,  cy:707.988  , r:8.16374 },
+  {id:"ball67" ,cx:593.912 ,  cy:707.988  , r:6.12281 },
+  {id:"ball68" ,cx:644.935 ,  cy:707.988  , r:4.08187 },
+  {id:"ball69" ,cx:693.918 ,  cy:707.988  , r:4.08187 },
+
+  {id:"ball70" ,cx:644.935 ,  cy:846.772  , r:4.08187 },
+
+  {id:"ball71" ,cx:693.918 ,  cy:846.772  , r:4.08187 },
+ 
+ 
+
   {id:"ball131" ,cx:538.806 ,  cy:777.38  ,  r:8.16374 },
   {id:"ball132" ,cx:593.912 ,  cy:777.38  ,  r:6.12281 },
   {id:"ball133" ,cx:644.935 ,  cy:777.38  ,  r:4.08187 },
@@ -162,17 +170,20 @@ export function Icon() {
   useEffect(() => {
     const masterTimeline = gsap.timeline({ repeat: -1, repeatDelay: 0.5 });
 
-    ballData.forEach((ball) => {
+    ballData.forEach((ball, index) => {
       const tl = gsap.timeline();
 
       // Animate each ball's opacity
-      tl.to(`#${ball.id}`, { duration: 1, opacity: 0.5, yoyo: true, repeat: -1 });
+      // tl.to(#${ball.id}, { duration: 0.9, opacity: 0.5, yoyo: true, repeat: -1 });
 
-      // Move the color across each ball
-      tl.to(`#${ball.id}`, {  duration: 10, ease: "power2.inOut" }, 0);
+      // Scale each ball up sequentially
+      tl.to(`#${ball.id}`, { scaleX: 1.4,scaleY:1.4, transformOrigin: "left center", duration: 0.5 , ease: "power2.inOut" });
 
-      // Add the individual ball timeline to the master timeline
-      masterTimeline.add(tl, 0);
+      // Scale each ball down sequentially
+      tl.to(`#${ball.id}`, { scaleX: 1,scaleY:1, transformOrigin: "right center", duration: 0.5, ease: "power2.out" });
+
+      // Add the individual ball timeline to the master timeline with a stagger
+      masterTimeline.add(tl, index * 0.1);
     });
 
     return () => masterTimeline.kill(); // Kill the master timeline on component unmount
@@ -181,7 +192,7 @@ export function Icon() {
   return (
     <svg
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 650 900"
+  viewBox="0 0 690 900"
   fill="none"
   style={{ width: "100%", height: "100%", maxWidth: "100%" }}
 >

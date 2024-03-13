@@ -13,16 +13,18 @@ export default function Itsolution() {
   return (
       <Container>
     <div style={{ backgroundColor: "#000" }}>
+<br />
 
-        <Grid container spacing={2} sx={{ paddingLeft: isMobileScreen ? "2vh" : "3vh" }}>
+
+        <Grid container spacing={2} sx={{ paddingLeft: isMobileScreen ? "2vh" : "5vh" }}>
           <Grid item xs={12} md={6} lg={6} xl={6}>
-            <Box padding={{ xs: "vh", md: "vh" }}>
+            <Box paddingLeft ={{ xs: "vh", md: "2vh",lg:"6vh",xl:"10vh" }}>
               <Typography
                 sx={{
                   color: "#F5F5F5",
                   fontWeight: '300',
                   fontFamily: "IBM Plex Sans Arabic",
-                  fontSize: isMobileScreen ? "12px" : isMediumScreen ? "14px" : "16px",
+                  fontSize: isMobileScreen ? "12px" : isMediumScreen ? "12px" : "16px",
                 }}
               >
                 About Us
@@ -31,23 +33,23 @@ export default function Itsolution() {
               <Typography
                 sx={{
                   fontFamily: "IBM Plex Sans Arabic",
-                  fontSize:{xs:"13px", sm:"19px",md:"23px",lg:"25px",xl:"30px"},
+                  fontSize:{xs:"20px", sm:"19px",md:"23px",lg:"25px",xl:"30px"},
                   // fontSize: isMobileScreen ? "3vh" : isMediumScreen ? "2.5vh" : "4vh",
-                  width:{xs:"30vh",sm:"50vh",md:"60vh",lg:"60vh"},
+                  // width:{xs:"30vh",sm:"50vh",md:"60vh",lg:"60vh"},
                   fontWeight: "600",
-                  lineHeight: "20px",
+                  lineHeight: "5vh",
                   letterSpacing: "0em",
                   textAlign: "left",
                   color: "#F5F5F5",
-                  // gap: "vh"
+                  //  gap: "vh"
                 }}
               >
                 Tailored IT Solutions in Riyadh <br />
                 <span style={{ color: "#F5F5F5", fontFamily: "IBM Plex Sans Arabic", fontWeight: "300" }}> Approach to Cost-Effectiveness</span>
               </Typography>
-              <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "2%", maxWidth: { xs: "34vw", md: "12vw" } }} />
+              <Box sx={{ borderBottom: "0.5vh solid #8868F9", my: "2%", maxWidth: { xs: "34vw",sm:"10vh" ,md: "30vw",lg:"35vh" } }} />
               <Box sx={{
-                paddingTop: { xs: "2vh", sm: "3vh", md: "15vh" },
+                paddingTop: { xs: "2vh", sm: "3vh", md: "15vh",lg:"8vh" },
                 paddingLeft: { xs: "0vh", sm: "vh", md: "0vh" },
                 paddingRight: { xs: "vh", sm: "vh" }
 
@@ -58,14 +60,12 @@ export default function Itsolution() {
                   sx={{
                     backgroundColor: "#553EFF",
                     borderRadius: {xs:"4px"},
-                    width: { xs: '40%', sm: '50%', md: "80%", lg: '40%' },
-                    height: { xs: '4vh', sm: '46px', md: "50px", lg: "60px" },
                     fontFamily: "IBM Plex Sans Arabic",
                     paddingLeft: {
-                      xs: "vh", sm: "18px", md: "7px",lg:"1px"
+                      xs: "vh", sm: "px", md: "px",lg:"px"
                     },
                     fontSize: {
-                      xs: "5.5px", sm: "14px", md: "16px",lg:"14px"
+                      xs: "5.5px", sm: "12px", md: "10px",lg:"8px"
                     }
                   }}
                 >
@@ -76,12 +76,12 @@ export default function Itsolution() {
             </Box>
           </Grid>
           <Grid item xs={12} md={6} lg={6} xl={6}>
-            <Box sx={{ paddingLeft: { xs: "0", md: "0vh" }, width: { xs: "30vh",sm:"40vh", md: "35.5vh" ,lg:"80vh"}, paddingTop: isMobileScreen ? "8%" : "18%", fontWeight: "300",  }}>
-              <Typography sx={{ color: "#C5C5C5", fontFamily: "IBM Plex Sans Arabic", fontSize: {xs:"14px",sm:"16px",md:"15px",lg:"18px"} }}>
+            <Box sx={{ paddingRight: { xs: "0", md: "12vh" },  paddingTop: isMobileScreen ? "8%" : "1%", fontWeight: "300",  }}>
+              <Typography sx={{ color: "#C5C5C5", fontFamily: "IBM Plex Sans Arabic", fontSize: {xs:"0.8",sm:"1vh",md:"2vh",lg:"2.5vhpx"} }}>
                 We aspire to be the premier IT solutions facilitator in the Kingdom, connecting clients with specialized expertise while maintaining operational agility and cost-effectiveness.
               </Typography>
               <br />
-              <Typography sx={{ color: "#C5C5C5", fontFamily: "IBM Plex Sans Arabic", fontSize: {xs:"14px",sm:"16px",md:"15px",lg:"18px"} }}>
+              <Typography sx={{ color: "#C5C5C5", fontFamily: "IBM Plex Sans Arabic", fontSize: {xs:"0.8",sm:"1vh",md:"2vh",lg:"2.5vhpx"} }}>
                 Headquartered in Riyadh, Kingdom of Saudi Arabia, Level Five is committed to providing innovative, tailored IT solutions by fostering strategic partnerships, leveraging external expertise, and optimizing resource allocation.
                 <br />
                 <br />
@@ -94,6 +94,12 @@ export default function Itsolution() {
           </Grid>
         </Grid>
         </div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
       </Container>
   );

@@ -1,48 +1,76 @@
-import React from 'react';
-import { Box, Typography, Link, Grid, useMediaQuery } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Grid, Typography, Link, Box, useMediaQuery } from '@mui/material';
+import React, { useState, useEffect } from 'react';
 
-export default function CustomFooter() {
-  const theme = useTheme();
-  const isSm = useMediaQuery(theme.breakpoints.down('sm'));
+export default function Footer() {
+  const inExtraSmallScreen = useMediaQuery("(max-width:599px)");
+  const inSmallScreen = useMediaQuery("(max-width:750px)"); 
+  const inMediumScreen = useMediaQuery("(max-width:900px)");
+  const inLargeScreen = useMediaQuery("(max-width:1199px)");
+  const inLmScreen = useMediaQuery ("(max-width:1535px)");
+  const inExtraLargeScreen = useMediaQuery("(max-width:2700px)");
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    // Clear timeout on unmount or when loading is finished
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Render null if loading is true
+  if (loading) {
+    return null;
+  }
+
+  
   return (
-    <Box
-      sx={{
-        width: '100%',
-        background: 'linear-gradient(143deg, rgba(0,0,0,1) 0%, rgba(1,1,12,1) 0%, rgba(7,4,66,0.9051995798319328) 33%, rgba(0,0,0,1) 45%, rgba(7,4,66,0.9051995798319328) 73%)',
-        borderTop: '0.5px solid #ffffff',
-        paddingTop: '2vh',
-        paddingBottom: '2vh',
-      }}
-    >
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6} md={4}>
-          <Box display="flex" justifyContent={isSm ? 'start' : 'flex-start'} alignItems="center">
-            <img src="./thumbnail_Master_logo_white 2.svg" alt="Logo" style={{ maxWidth: '40%', height: 'auto' }} />
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <Box display="flex" justifyContent="center" alignItems="center" paddingTop={{ xs: '1.5vh', sm: 0 }}>
-            <Typography variant="body1" style={{ color: "#fff", marginRight: '1rem' }}>
-              <Link href="/support" color="inherit" underline="none">Support</Link>
-            </Typography>
-            <Typography variant="body1" style={{ color: "#fff", marginRight: '1rem' }}>
+    <Box borderTop= '0.5px solid #FFFFFFB2' >
+
+    <Grid container spacing={2} sx={{ padding: '4vh'  }}>
+      <Grid item xs={12} sm={4} md={4} lg={3}>
+      <Box
+  display="flex"
+  alignItems={{ xs: 'center', sm: 'end' }}
+>
+  <img
+    src="./thumbnail_Master_logo_white 2.svg"
+    alt=""
+    style={{
+      // backgroundColor:'red',
+      paddingBottom:'1%',
+      paddingLeft:inExtraSmallScreen?"30%": inSmallScreen?"15%":'15%',
+      height: { xs: '2vh', sm: '8vh', md: "10vh", lg:"14vh", xl:"19vh" }, // Adjust based on screen size
+      width: '38%', // Ensure image doesn't exceed container width
+      
+      // width: 'auto', // Maintain aspect ratio
+      // height: 'auto', // Maintain aspect ratio
+    }}
+  />
+</Box>
+      </Grid>
+      <Grid item xs={12} sm={4} md={4} lg={4} xl={6} >
+        <Box display="flex" justifyContent={'space-evenly'} width={'26%'} marginInline={'38%'} paddingTop={'1vh'} sx={{paddingLeft:{lg:"20%", xl:"0%"}}}>
+          <Typography variant="body1" style={{ color: "#FFFFFFB2", paddingRight: inExtraSmallScreen? "8%": inSmallScreen? "5%": inMediumScreen?"8%": inLargeScreen?"8%": inLmScreen?"10%": inExtraLargeScreen?"5%":"", fontSize:inExtraSmallScreen?"55%":inSmallScreen?"50%":inMediumScreen?"10px":inLargeScreen?"12px": inLmScreen?"13px":inExtraLargeScreen?"100%":"", fontWeight:'400' }}>
+            <Link href="/support" color="inherit" underline="none">Support</Link>
+          </Typography>
+          <Typography variant="body1" style={{ color: "#FFFFFFB2",  paddingRight: inSmallScreen? "8%":inMediumScreen?"8%": inLargeScreen?"8%": inLmScreen?"8%": inExtraLargeScreen?"5%":"", fontSize:inExtraSmallScreen?"55%":inSmallScreen?"50%":inMediumScreen?"10px":inLargeScreen?"12px": inLmScreen?"13px":inExtraLargeScreen?"100%":"",  whiteSpace:'nowrap' , fontWeight:'400'}}>
               <Link href="/privacy-policy" color="inherit" underline="none">Privacy Policy</Link>
             </Typography>
-            <Typography variant="body1" style={{ color: "#fff" }}>
-              <Link href="/support-privacy-policy" color="inherit" underline="none">Support Privacy Policy</Link>
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <Box display="flex" justifyContent="center" alignItems="center" paddingTop={{ xs: '1.5vh', sm: 0 }}>
-            <Typography style={{ color: "#fff" }}>
-              © 2020 UXTheme, All
-            </Typography>
-          </Box>
-        </Grid>
+          <Typography variant="body1" style={{ color: "#FFFFFFB2",  paddingRight: inSmallScreen? "9%":inMediumScreen?"9%": inLargeScreen?"5%": inLmScreen?"1%": inExtraLargeScreen?"8%":"",  fontSize:inExtraSmallScreen?"55%":inSmallScreen?"50%":inMediumScreen?"10px":inLargeScreen?"12px": inLmScreen?"13px":inExtraLargeScreen?"100%":"",  whiteSpace:'nowrap', fontWeight:'400' }}>
+            <Link href="/support-privacy-policy" color="inherit" underline="none">Terms and Condition</Link>
+          </Typography>
+        </Box>
       </Grid>
-    </Box>
+      <Grid item xs={12} sm={4} md={4} lg={3} xl={3}>
+        <Box display={'flex'} justifyContent={'space-around'} paddingTop={'1vh'}  >
+          <Typography    sx={{ color: "#FFFFFFB2", fontWeight: '400', fontSize:inExtraSmallScreen?"55%":inSmallScreen?"50%":inMediumScreen?"10px":inLargeScreen?"12px": inLmScreen?"13px":inExtraLargeScreen?"17px":"", whiteSpace: 'nowrap',paddingLeft: inSmallScreen?"": inMediumScreen?"16%": inExtraSmallScreen?"%": inLargeScreen? "15%": inLmScreen?"130%":inExtraLargeScreen?"15%":"" }}>
+          © 2024 LevelFive, All Rights Reserved </Typography>
+        </Box>
+      </Grid>
+    </Grid>
+  </Box>
   );
 }
