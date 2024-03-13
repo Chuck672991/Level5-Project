@@ -1,35 +1,8 @@
-// "use client";
-// import Layout from "@/components/Layout";
-// import Header from "@/components/Header";
-// import Itsolution from "@/components/Itsolution";
-
-// import Story from "@/components/Story";
-// import Connect from "@/components/Connect";
-// import ResponsiveCard from "@/components/ResponsiveCard";
-
-// const Home = () => {
-//   return (
-//     <>
-//       {/* <Head> */}
-//       <title>levelfive</title>
-//       <Layout>
-//         <Header />
-//         <Itsolution />
-//         <Story />
-//         <ResponsiveCard />
-//         <Connect />
-//       </Layout>
-//     </>
-//   );
-// };
-// export default Home;
-
 import React, { useState, useEffect } from "react";
 import Nevbar from "@/components/Nevbar";
 import Footer from "@/components/Footer";
 import Itsolution from "@/components/Itsolution";
 import ResponsiveCard from "@/components/ResponsiveCard";
-
 import Story from "@/components/Story";
 import Connect from "@/components/Connect";
 import Loading from "@/components/Loading"; // Assuming you have a Loading component
@@ -38,7 +11,6 @@ import Header from "@/components/Header";
 
 const Home = ({ children }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [opacity, setopacity] = useState(0);
 
   useEffect(() => {
     function loadingFn() {
@@ -46,21 +18,19 @@ const Home = ({ children }) => {
       tl.to("#loadingAnimation", {
         height: 0,
         duration: 4,
-
         ease: Expo.easeInOut,
         delay: 1,
         onComplete: () => {
           setIsLoaded(true);
         },
-      }).to("#childrens", {
-        height: "100vh",
-        delay: 1,
-        duration: 3,
-        transition: "Expo.ease",
       });
     }
-    return loadingFn();
-  }, [{ isLoaded }]);
+
+    // Scroll to top when component is mounted
+    window.scrollTo(0, 0);
+
+    loadingFn();
+  }, []);
 
   return (
     <div id="main" style={{ position: "relative" }}>
@@ -68,11 +38,9 @@ const Home = ({ children }) => {
         id="loadingAnimation"
         style={{
           height: "100vh",
-          // position: "absolute",
           width: "100%",
           display: isLoaded ? "none" : "",
           transition: "all 0.1s ease",
-          // overflow: "hidden",
         }}
       >
         <Loading id="loading" />
@@ -82,7 +50,6 @@ const Home = ({ children }) => {
         style={{
           position: "absolute",
           top: "100%",
-
           width: "100%",
           height: "0px",
         }}
@@ -92,7 +59,6 @@ const Home = ({ children }) => {
         {isLoaded && (
           <>
             <Itsolution />
-
             <Story />
             <ResponsiveCard />
             <Connect />
