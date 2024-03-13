@@ -216,7 +216,7 @@ const handleBack = () => {
         display: "flex",
         flexDirection: "start",
         fontSize: {
-            xs: "3.5vh",
+            xs: "3vh",
             sm: "3vh", // Adjust for small screens
             md: "3vh", // Adjust for medium screens
             lg: "3.5vh", // Adjust for large screens
@@ -231,7 +231,7 @@ const handleBack = () => {
         display: "flex",
         flexDirection: "",
         fontSize: {
-            xs: "3vh",
+            xs: "2.5vh",
             sm: "2.5vh", // Adjust for small screens
             md: "2vh", // Adjust for medium screens
             lg: "2.5vh", // Adjust for large screens
@@ -246,10 +246,10 @@ const handleBack = () => {
         display: "",
         color: activeStep === index ? '#FFFF' : '#ffff',
         fontSize: {
-            xs: "2.2vh",
-            sm: "1.5vh", // Adjust for small screens
-            md: "2vh", // Adjust for medium screens
-            lg: "2vh", // Adjust for large screens
+            xs: "2vh",
+            sm: "1.8vh", // Adjust for small screens
+            md: "1.5vh", // Adjust for medium screens
+            lg: "1.2vh", // Adjust for large screens
         },
     }}>
         {image.description}
@@ -258,7 +258,7 @@ const handleBack = () => {
         display: "flex",
         flexDirection: "",
         color: activeStep === index ? '#FFFF' : ' #553EFF',
-        fontSize: {xs:"3vh",sm:"",md:"2.5vh",lg:"2vh"},
+        fontSize: {xs:"1.5vh",sm:"",md:"2.5vh",lg:"2vh"},
         paddingBottom: "10%",
         paddingTop: "5%"
     }}>

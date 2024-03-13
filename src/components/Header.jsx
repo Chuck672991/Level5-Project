@@ -5,7 +5,7 @@ import Design from './Design';
 
 export default function Header() {
   const isSmallScreen = useMediaQuery("(max-width:600px)");
-  const isLgScreen = useMediaQuery('(min-width:1800px)');
+  const isLgScreen = useMediaQuery('(min-width:1200px)');
 
   return (
     <>
@@ -53,27 +53,14 @@ export default function Header() {
               {/* <Box  >
                 <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="level five logo " style={{ paddingTop:isLgScreen?"18%":"20%",   width:isSmallScreen?"20vw":"25vw" }} sx={{paddingLeft:{xs:"4vh", sm:"2.5vh" , md:"15vh",lg:"26vh",xl:"28vh"}}} />
               </Box> */}
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 
-            <Grid item xs={12}>
-                
-                <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="level five logo " style={{ paddingBottom:"" ,paddingLeft: isSmallScreen ? "4vh" : "8vh", width: isSmallScreen ? "10vh" : "40vh" }} />
-      
-                  
-                </Grid>
-      
+<Box>
+                <img src="./thumbnail_Master_logo_white 2 (1).svg" alt="level five logo " style={{ paddingTop:isLgScreen?"14%":"20%",   width:isSmallScreen?"30vw":"330px", paddingLeft: isLgScreen?'100px':'20%'} } />
+              </Box>     
             </Grid>
             {/* Right Grid Item */}
             <Grid item xs={6} md={8} lg={6} xl={6} >
-              <Box sx={{ paddingLeft: {xs:'18%',sm:"16%",md:"28%",lg:"15%",xl:"15%"},paddingTop: { xs: "2vh", md: "4vh" },paddingBottom:{xs:'5vh',md:"30vh"},opacity:{xs:"23%",sm:"23%",md:"50%" , lg:"50%",xl:"50%"}, width: { xs: "100%",sm:"80%",md: "80%",lg:"80%" } }}>
+              <Box sx={{ paddingLeft: {xs:'18%',sm:"16%",md:"28%",lg:"15%",xl:"15%"},paddingTop: { xs: "2vh", md: "4vh" },paddingBottom:{xs:'0vh',md:"0vh"},opacity:{xs:"23%",sm:"23%",md:"50%" , lg:"20%",xl:"50%"}, width: { xs: "100%",sm:"80%",md: "80%",lg:"80%" } }}>
                 <Design />
               </Box>
             </Grid>
