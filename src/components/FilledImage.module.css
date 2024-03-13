@@ -6,7 +6,6 @@
 
   /* position:absolute; */
   animation: fillLogo 4s forwards;
-  /* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); */
 }
 
 @keyframes fillLogo {
@@ -18,18 +17,18 @@
   }
 }
 
-/* .smallScreen {
+.smallScreen {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 90%; 
-} */
+  /* padding-top: 90%; */
+}
 
 .largeScreen {
-  /* display: flex;
+  display: flex;
   flex-direction: row;
-  justify-content: center; */
-  /* padding-top: 20%;  */
+  justify-content: center;
+  /* padding-top: 20%; */
 }
 
 @media (min-width: 601px) {
