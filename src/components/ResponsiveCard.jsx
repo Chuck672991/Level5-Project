@@ -4,14 +4,13 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore"; // Import the ExpandMoreIcon
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Grid from "@mui/material/Grid";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import "swiper/css";
-import { useRef } from "react";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Button from "@mui/material/Button";
@@ -32,12 +31,12 @@ const sections = [
       "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique,",
   },
   {
-    label: "Emerging Technologies",
+    label: "Support & Maintenance",
     content:
       "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique,",
   },
   {
-    label: "Software Technologies ",
+    label: "Emerging Technologies ",
     content:
       "Level Five Information Systems Technology Company emerged as a boutique IT house with a distinctive story. The choice of “Level Five” was akin to the journey through a boutique,  Just as one explores unique offering in a boutique,",
   },
@@ -100,6 +99,19 @@ function ResponsiveCard() {
     newExpandedSections[index] = !newExpandedSections[index];
     setExpandedSections(newExpandedSections);
     setActiveSection(activeSection === index ? null : index);
+
+    // Scroll to the left if needed
+    const cardRef = document.getElementById(`card-${index}`);
+    if (cardRef) {
+      const cardRect = cardRef.getBoundingClientRect();
+      const containerRect = document
+        .getElementById("swiper-container")
+        .getBoundingClientRect();
+      if (cardRect.right > containerRect.right) {
+        document.getElementById("swiper-container").scrollLeft +=
+          cardRect.right - containerRect.right;
+      }
+    }
   };
 
   const handleClickImage = (index) => {
@@ -110,18 +122,20 @@ function ResponsiveCard() {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
     }
-    setActiveStep((prevActiveStep) => (prevActiveStep + 1) % images.length);
-    setActiveSection(activeStep);
+    const nextStep = (activeStep + 1) % images.length;
+    setActiveStep(nextStep);
+    setActiveImage(nextStep);
+    setActiveSection(nextStep);
   };
 
   const handleBack = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slidePrev();
     }
-    setActiveStep((prevActiveStep) =>
-      prevActiveStep === 0 ? images.length - 1 : prevActiveStep - 1
-    );
-    setActiveSection(activeStep);
+    const prevStep = activeStep === 0 ? images.length - 1 : activeStep - 1;
+    setActiveStep(prevStep);
+    setActiveImage(prevStep);
+    setActiveSection(prevStep);
   };
 
   const toggleContact = () => {
@@ -138,12 +152,8 @@ function ResponsiveCard() {
             minWidth: "100%",
           }}
         >
-          {/* <Box sx={{}}>
-          <Typography sx={{}}></Typography>
-        </Box> */}
-
           <Box sx={{ flexGrow: 2 }}>
-            <Grid container spacing={2.5} justifyContent="end">
+            <Grid container spacing={2.3} justifyContent="end">
               <Grid
                 item
                 xs={12}
@@ -153,8 +163,29 @@ function ResponsiveCard() {
                 xl={6}
                 order={isMediumScreen2 ? 2 : 1}
               >
-                <Box sx={{ paddingX: isSmallScreen ? "4%" : "8%" }}>
+                <Box
+                  sx={{
+                    paddingX: isSmallScreen ? "4%" : "8%",
+                    paddingY: "10vh",
+                  }}
+                >
                   <Box sx={{}}>
+                    <Typography
+                      sx={{
+                        color: "#F5F5F5",
+                        fontWeight: "300",
+                        fontFamily: "IBM Plex Sans Arabic",
+                        fontSize: {
+                          xs: "8px",
+                          sm: "8px",
+                          md: "13px",
+                          lg: "10px",
+                          xl: "18px",
+                        },
+                      }}
+                    >
+                      Our Solutions
+                    </Typography>
                     <Typography
                       sx={{
                         fontWeight: "bold",
@@ -162,7 +193,7 @@ function ResponsiveCard() {
                           xs: "20px",
                           sm: "19px",
                           md: "23px",
-                          lg: "25px",
+                          lg: "24px",
                           xl: "30px",
                         },
                         color: "#F5F5F5",
@@ -198,33 +229,32 @@ function ResponsiveCard() {
                     <Typography
                       sx={{
                         color: "#F5F5F5",
-                        paddingTop: "2%",
+                        paddingTop: "2.5%",
                         fontSize: { xs: "3vh", md: "3vh.", lg: "4.5" },
+
                         paddingBottom: { lg: "3vh" },
                       }}
                     >
-                      IT Services
+                      {images[activeStep].label}
                     </Typography>
                     {sections.map((section, index) => (
                       <div key={index}>
                         <Button
                           sx={{
+                            justifyContent: "flex-start",
                             color: "#C5C5C5",
+                            justifyContent: "left",
                             fontFamily: "IBM Plex Sans Arabic",
-                            fontSize: isSmallScreen ? "14px" : "16px",
+                            fontSize: isSmallScreen ? "13px" : "15px",
                             fontWeight: "10",
-                            textAlign: "left",
                             lineHeight: "3",
-                            // bgcolor: "pink",
-                            marginBottom: "1vw",
                             width: "100%",
                             height: "100%",
                             borderBottom: "1px solid #ffff",
-                            // paddingBottom:"5%"
                           }}
                           onClick={() => handleClickSection(index)}
                         >
-                          {section.label}
+                          {section.label}{" "}
                           <ExpandMoreIcon
                             sx={{
                               color: expandedSections[index]
@@ -233,25 +263,30 @@ function ResponsiveCard() {
                             }}
                           />
                         </Button>
+
                         {activeSection === index && (
                           <Box>
                             <Typography
                               sx={{
                                 color: "#C5C5C5",
                                 fontFamily: "IBM Plex Sans Arabic",
-                                fontSize: "20px",
+                                fontSize: "19px",
+                                textAlign: "center",
+                                padding: "13px",
                                 fontWeight: "400",
                                 lineHeight: "normal",
-                                mb: "px",
+                                // mb: "50px",
                               }}
                             >
                               {section.label}
                             </Typography>
                             <Typography
                               sx={{
-                                color: "#C5C5C5",
+                                color: expandedSections[index]
+                                  ? "#553EFF"
+                                  : "#C5C5C5",
                                 fontFamily: "IBM Plex Sans Arabic",
-                                fontSize: "12px",
+                                fontSize: "14px",
                                 fontWeight: "400",
                                 lineHeight: "normal",
                                 letterSpacing: "0.4px",
@@ -265,14 +300,6 @@ function ResponsiveCard() {
                       </div>
                     ))}
                   </Box>
-
-                  {/* <Grid container my={2} spacing={2}>
-
-                  <Grid item xs={12} sm={12} md={8}    >
-
-                   
-                  </Grid>
-                </Grid> */}
                 </Box>
               </Grid>
 
@@ -295,8 +322,10 @@ function ResponsiveCard() {
                   }}
                 >
                   <Box
+                    id="swiper-container"
                     sx={{
                       position: "relative",
+                      justifyItems: "end",
                       paddingLeft: {
                         xs: "35%",
                         sm: "%",
@@ -315,7 +344,7 @@ function ResponsiveCard() {
                   </Box>
                   <Swiper
                     ref={swiperRef}
-                    spaceBetween={10} // Adjust as needed
+                    spaceBetween={10}
                     slidesPerView={isSmallScreen ? 1 : isMediumScreen ? 1 : 2.4}
                     navigation
                     pagination={{ clickable: false }}
@@ -327,14 +356,12 @@ function ResponsiveCard() {
                             elevation: "",
                             maxWidth: "100%",
                             mt: 2,
-                            // font:"50px",
                             height: "100%",
-                            // color: activeStep === index ? '#553EFF' : '#FFFF',
-
                             bgcolor:
-                              activeStep === index + 1 ? "#553EFF" : "black",
+                              activeImage === index ? "#553EFF" : "black",
                           }}
                           onClick={() => handleClickImage(index)}
+                          id={`card-${index}`}
                         >
                           <CardContent
                             sx={{ fontFamily: "IBM Plex Sans Arabic" }}
@@ -358,9 +385,9 @@ function ResponsiveCard() {
                                 flexDirection: "start",
                                 fontSize: {
                                   xs: "3.5vh",
-                                  sm: "3vh", // Adjust for small screens
-                                  md: "3vh", // Adjust for medium screens
-                                  lg: "3.5vh", // Adjust for large screens
+                                  sm: "3vh",
+                                  md: "3vh",
+                                  lg: "3.5vh",
                                 },
                                 color: activeStep === index ? "#FFFF" : "#ffff",
                                 paddingBottom: "vh",
@@ -375,9 +402,9 @@ function ResponsiveCard() {
                                 flexDirection: "",
                                 fontSize: {
                                   xs: "3vh",
-                                  sm: "2.5vh", // Adjust for small screens
-                                  md: "2vh", // Adjust for medium screens
-                                  lg: "2.5vh", // Adjust for large screens
+                                  sm: "2.5vh",
+                                  md: "2vh",
+                                  lg: "2.5vh",
                                 },
                                 color: activeStep === index ? "#FFFF" : "#ffff",
                                 paddingBottom: "vh",
@@ -394,9 +421,9 @@ function ResponsiveCard() {
                                 color: activeStep === index ? "#FFFF" : "#ffff",
                                 fontSize: {
                                   xs: "2.2vh",
-                                  sm: "1.5vh", // Adjust for small screens
-                                  md: "2vh", // Adjust for medium screens
-                                  lg: "2vh", // Adjust for large screens
+                                  sm: "1.5vh",
+                                  md: "2vh",
+                                  lg: "2vh",
                                 },
                               }}
                             >
@@ -420,7 +447,7 @@ function ResponsiveCard() {
                             >
                               Learn More...
                             </Button>
-                          </CardContent>{" "}
+                          </CardContent>
                         </Card>
                       </SwiperSlide>
                     ))}
