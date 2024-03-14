@@ -52,7 +52,7 @@ export default function Header() {
                     },
                   }}
                 >
-                  IT Systems Companyy
+                  IT Systems Compan{" "}
                 </Typography>
                 <Typography
                   sx={{

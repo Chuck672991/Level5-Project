@@ -23,17 +23,19 @@ const Home = ({ children }) => {
         onComplete: () => {
           setIsLoaded(true);
         },
+      }).to("#childrens", {
+        height: "100vh",
+        duration: 3,
+        overflowY: "",
+        transition: "ease",
       });
     }
-
-    // Scroll to top when component is mounted
-    window.scrollTo(0, 0);
 
     loadingFn();
   }, []);
 
   return (
-    <div id="main" style={{ position: "relative" }}>
+    <div id="main" style={{ position: "relative", maxHeight: "100vh" }}>
       <div
         id="loadingAnimation"
         style={{
@@ -51,7 +53,9 @@ const Home = ({ children }) => {
           position: "absolute",
           top: "100%",
           width: "100%",
+          background: "orange",
           height: "0px",
+          overflowY: "hidden",
         }}
       >
         <Nevbar />
